@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bearing"
+            android:icon="@drawable/ic_bearing"
+            android:title="Bearing Calculator" />
+        <item
+            android:id="@+id/nav_materials"
+            android:title="Find Materials" />
+    </group>
+    <item android:title="External Links">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_ext_reddit"
+                    android:title="r/EliteDangerous" />
+            </group>
+        </menu>
+    </item>
+</menu>
