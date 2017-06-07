@@ -58,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_materials:
 
                 break;
+            case R.id.nav_notes:
+                fragClass = Notepad.class;
+                break;
             case R.id.nav_ext_reddit:
                 Intent browserIntent = new Intent(
                         Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/r/elitedangerous/"));

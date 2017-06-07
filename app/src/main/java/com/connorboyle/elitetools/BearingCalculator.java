@@ -36,7 +36,7 @@ public class BearingCalculator extends Fragment implements TextWatcher, Spinner.
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         presets = new ArrayList<>();
-        presets.add(new CoordPreset("Custom", null));
+        presets.add(new CoordPreset("Custom\n", null));
         presets.add(new CoordPreset("Pleiades Sector AB-W B2-4 - 9 A\nAlien Crash Site 1\n", new LatLng(-26.37, 97.7)));
         presets.add(new CoordPreset("HIP 17862 - 6 C A\nAlien Crash Site 2\n", new LatLng(30.32, -98.58)));
         presets.add(new CoordPreset("HIP 17403 - A 4 A\nAlien Crash Site 3\n", new LatLng(-34.98, -141.41)));
