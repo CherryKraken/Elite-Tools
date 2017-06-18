@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.nav_notes:
-                fragClass = Notepad.class;
+                fragClass = Notebook.class;
                 break;
             case R.id.nav_ext_reddit:
                 Intent browserIntent = new Intent(
