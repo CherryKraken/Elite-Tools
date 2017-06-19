@@ -30,9 +30,9 @@ public class NoteDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table = "CREATE TABLE " + TABLE_NAME + " (" + ID + " integer primary key " +
-                TITLE + " text not null " +
-                TEXT + " text " +
+        String table = "CREATE TABLE " + TABLE_NAME + " (" + ID + " integer primary key, " +
+                TITLE + " text not null, " +
+                TEXT + " text, " +
                 MODIFIED + " integer not null);";
         db.execSQL(table);
     }

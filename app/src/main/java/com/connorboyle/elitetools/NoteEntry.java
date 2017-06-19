@@ -1,10 +1,12 @@
 package com.connorboyle.elitetools;
 
+import java.io.Serializable;
+
 /**
  * Created by Connor Boyle on 2017-06-16.
  */
 
-public class NoteEntry {
+public class NoteEntry implements Serializable{
     long id;
     String title;
     String text;
