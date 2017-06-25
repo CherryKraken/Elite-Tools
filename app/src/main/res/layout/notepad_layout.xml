@@ -5,27 +5,36 @@
     android:layout_height="match_parent"
     android:weightSum="10">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"/>
+
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        tools:text="My title" />
+        tools:text="My title"
+        android:layout_margin="5dp"/>
 
     <EditText
         android:id="@+id/etNotepad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="9"
+        android:layout_weight="9.5"
         android:ems="10"
+        android:gravity="start"
+        android:hint="Note"
         android:inputType="textMultiLine"
         android:maxLines="50"
         android:selectAllOnFocus="false"
-        tools:text="hello"
         android:textAlignment="textStart"
-        android:gravity="start"/>
+        tools:text="hello"
+        android:layout_margin="5dp"/>
 </LinearLayout>

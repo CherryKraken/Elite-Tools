@@ -16,9 +16,9 @@ public class NoteDBHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "notes";
     private static final int DB_VERSION = 1;
     private static final String ID = "_id";
-    private static final String TITLE = "title";
-    private static final String TEXT = "text";
-    private static final String MODIFIED = "modified";
+    public static final String TITLE = "title";
+    public static final String TEXT = "text";
+    public static final String MODIFIED = "modified";
 
     private SQLiteDatabase sqlDB;
 

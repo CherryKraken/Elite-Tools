@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -25,8 +27,8 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
     ListView lvNotebook;
     Button btnNewNote;
 
-    static final int ADD_NEW_NOTE = 1;
-    static final int UPDATE_NOTE = 2;
+    static final int ADD_NEW_NOTE = 10;
+    static final int UPDATE_NOTE = 20;
 
     NoteDBHelper db;
     Cursor cursor;
@@ -43,7 +45,6 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
             btnNewNote = (Button) view.findViewById(R.id.btnNewNote);
             btnNewNote.setOnClickListener(this);
         }
-
 
         db = new NoteDBHelper(getContext());
 
@@ -84,29 +85,41 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        NoteEntry note = (NoteEntry) data.getSerializableExtra("note");
-        if (resultCode == RESULT_OK)
-        switch (requestCode) {
-            case ADD_NEW_NOTE:
-                db.open();
-                db.createNote(note);
-                db.close();
-                break;
-            case UPDATE_NOTE:
-                db.open();
-                db.updateNote(note);
-                db.close();
-                break;
+        NoteEntry note;
+        if (resultCode == RESULT_OK && data != null) {
+            switch (requestCode) {
+                case ADD_NEW_NOTE:
+                    db.open();
+                    note = (NoteEntry) data.getSerializableExtra("savedNote");
+                    db.createNote(note);
+                    db.close();
+                    break;
+                case UPDATE_NOTE:
+                    db.open();
+                    note = (NoteEntry) data.getSerializableExtra("savedNote");
+                    db.updateNote(note);
+                    db.close();
+                    break;
+            }
         }
+        refreshList();
     }
 
     private void refreshList() {
         db.open();
         cursor = db.getNotes();
-        if (cursor.moveToFirst()) {
-            SimpleCursorAdapter sca = new SimpleCursorAdapter(getContext(), android.R.layout.simple_list_item_1, cursor, new String [] {"title"}, null);
+
+//        if (cursor.moveToFirst()) {
+            SimpleCursorAdapter sca = new SimpleCursorAdapter(
+                    view.getContext(),
+                    android.R.layout.simple_list_item_1,
+                    cursor,
+                    new String[]{NoteDBHelper.TITLE},
+                    new int[]{android.R.layout.simple_list_item_1},
+                    0);
             lvNotebook.setAdapter(sca);
-        }
+//        }
+
         db.close();
     }
 }
