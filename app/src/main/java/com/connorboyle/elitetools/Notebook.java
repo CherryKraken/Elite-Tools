@@ -108,6 +108,7 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
     private void refreshList() {
         db.open();
         cursor = db.getNotes();
+        cursor.moveToFirst();
 
 //        if (cursor.moveToFirst()) {
             SimpleCursorAdapter sca = new SimpleCursorAdapter(
@@ -115,7 +116,7 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
                     android.R.layout.simple_list_item_1,
                     cursor,
                     new String[]{NoteDBHelper.TITLE},
-                    new int[]{android.R.layout.simple_list_item_1},
+                    new int[]{android.R.id.text1},
                     0);
             lvNotebook.setAdapter(sca);
 //        }
