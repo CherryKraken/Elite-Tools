@@ -80,6 +80,7 @@ public class Notebook extends Fragment implements View.OnClickListener, ListView
         db.open();
         db.deleteNote(noteToDelete);
         db.close();
+        refreshList(); //TODO: add "undo delete" snackbar
         return true;
     }
 
