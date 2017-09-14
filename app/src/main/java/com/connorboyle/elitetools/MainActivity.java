@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_notes:
                 fragClass = Notebook.class;
                 break;
+            case R.id.nav_blueprints:
+                fragClass = EngineeringActivity.class;
+                break;
             case R.id.nav_ext_reddit:
                 Intent browserIntent = new Intent(
                         Intent.ACTION_VIEW, Uri.parse("https://www.reddit.com/r/elitedangerous/"));

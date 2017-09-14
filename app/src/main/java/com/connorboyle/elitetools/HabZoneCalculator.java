@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 /**
  * Created by Connor Boyle on 09-Sep-17.
@@ -36,6 +37,8 @@ public class HabZoneCalculator extends Fragment {
     }
 
     private void setupControls() {
+        EditText numRads = (EditText)v.findViewById(R.id.numRads);
+        EditText numKelvin = (EditText)v.findViewById(R.id.numKelvin);
     }
 
     private double luminosityOf(double radius, double temp) {

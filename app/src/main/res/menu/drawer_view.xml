@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_bearing"
             android:icon="@drawable/ic_bearing"
             android:title="Bearing Calculator" />
         <item
+            android:id="@+id/nav_hzc"
+            android:title="Habitable Zone Calculator"/>
+        <item
+            android:id="@+id/nav_engineers"
+            android:icon="@drawable/ic_engineer"
+            android:title="Engineering" />
+        <item
+            android:id="@+id/nav_blueprints"
+            android:icon="@drawable/ic_modules"
+            android:title="Blueprints" />
+        <item
             android:id="@+id/nav_materials"
+            android:icon="@drawable/ic_search"
             android:title="Find Materials" />
         <item
             android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_notepad"
             android:title="Notepad"/>
     </group>
     <item android:title="External Links">
@@ -19,6 +33,15 @@
                     android:id="@+id/nav_ext_reddit"
                     android:title="r/EliteDangerous" />
             </group>
+        </menu>
+    </item>
+    <item android:title="Settings">
+        <menu>
+            <item
+            android:enabled="true"
+            android:title="Enable Ads"
+            app:actionLayout="@layout/switch_item"
+            app:showAsAction="always"/>
         </menu>
     </item>
 </menu>
