@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
@@ -41,6 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Minimum Limit ($)" />
+        <TextView
+            android:id="@+id/txtMinInner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <LinearLayout
@@ -54,6 +60,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Inner Zone Limit ($$)" />
+        <TextView
+            android:id="@+id/txtInner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <LinearLayout
@@ -67,6 +78,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Optimal Zone Limit ($$$)" />
+
+        <TextView
+            android:id="@+id/txtOptimal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="1000 Ls" />
     </LinearLayout>
 
     <LinearLayout
@@ -80,6 +98,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Outer Zone Limit ($$)" />
+        <TextView
+            android:id="@+id/txtOuter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <LinearLayout
@@ -93,6 +116,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Maximum Limit ($)" />
+        <TextView
+            android:id="@+id/txtMaxOuter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </LinearLayout>
