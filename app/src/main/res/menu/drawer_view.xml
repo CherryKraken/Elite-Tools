@@ -12,7 +12,7 @@
         <item
             android:id="@+id/nav_engineers"
             android:icon="@drawable/ic_engineer"
-            android:title="Engineering" />
+            android:title="Engineers" />
         <item
             android:id="@+id/nav_blueprints"
             android:icon="@drawable/ic_modules"
