@@ -22,4 +22,20 @@ public class NoteEntry implements Serializable{
     NoteEntry(String title, String text, long modified) {
         this(-1, title, text, modified);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        NoteEntry noteEntry = (NoteEntry) o;
+
+        return id == noteEntry.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) (id ^ (id >>> 32));
+    }
 }
