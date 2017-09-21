@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
                 fragClass = HabZoneCalculator.class;
                 break;
             case R.id.nav_materials:
-                //TODO
+                fragClass = MaterialsFinderActivity.class;
                 break;
             case R.id.nav_notes:
                 fragClass = Notebook.class;
                 break;
             case R.id.nav_blueprints:
-                fragClass = EngineeringActivity.class;
+                fragClass = BlueprintsActivity.class;
                 break;
             case R.id.nav_engineers:
-                //TODO
+                fragClass = EngineersActivity.class;
                 break;
             case R.id.nav_ext_reddit:
                 Intent browserIntent = new Intent(
