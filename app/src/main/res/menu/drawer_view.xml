@@ -3,12 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_bearing"
-            android:icon="@drawable/ic_bearing"
-            android:title="Bearing Calculator" />
-        <item
-            android:id="@+id/nav_hzc"
-            android:title="Habitable Zone Calculator"/>
+            android:id="@+id/nav_notes"
+            android:icon="@drawable/ic_notepad"
+            android:title="Notepad"/>
         <item
             android:id="@+id/nav_engineers"
             android:icon="@drawable/ic_engineer"
@@ -20,11 +17,15 @@
         <item
             android:id="@+id/nav_materials"
             android:icon="@drawable/ic_search"
-            android:title="Find Materials" />
+            android:title="Materials" />
         <item
-            android:id="@+id/nav_notes"
-            android:icon="@drawable/ic_notepad"
-            android:title="Notepad"/>
+            android:id="@+id/nav_bearing"
+            android:icon="@drawable/ic_bearing"
+            android:title="Bearing Calculator" />
+        <item
+            android:id="@+id/nav_hzc"
+            android:icon="@drawable/ic_planet"
+            android:title="Habitable Zone Calculator"/>
     </group>
     <item android:title="External Links">
         <menu>
