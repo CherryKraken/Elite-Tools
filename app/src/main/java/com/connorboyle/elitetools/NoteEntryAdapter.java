@@ -1,9 +1,9 @@
 package com.connorboyle.elitetools;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
+import android.database.DataSetObservable;
+import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
@@ -17,8 +17,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import static com.connorboyle.elitetools.Notebook.UPDATE_NOTE;
 
 /**
  * Created by Connor Boyle on 16-Sep-17.
@@ -50,7 +48,8 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
 
     @Override
     public void onBindViewHolder(final NoteEntryViewHolder viewHolder, Cursor cursor) {
-        getCursor().moveToPosition(cursor.getPosition());
+        changeCursor(cursor);
+        getCursor().moveToPosition(viewHolder.getAdapterPosition());
         final NoteEntry note = new NoteEntry(
                 getCursor().getLong(0), getCursor().getString(1), getCursor().getString(2), 0);
         viewHolder.tvNoteTitle.setText(note.title);
@@ -59,7 +58,6 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
             // we need to show the "undo" state of the row
             viewHolder.itemView.setBackgroundColor(Color.RED);
             viewHolder.tvNoteTitle.setVisibility(View.GONE);
-            viewHolder.flNoteEntry.setVisibility(View.GONE);
             viewHolder.flNoteEntry.setOnClickListener(null);
             viewHolder.btnUndo.setVisibility(View.VISIBLE);
             viewHolder.btnUndo.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +70,7 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
                         handler.removeCallbacks(pendingRemovalRunnable);
                     notesToRemove.remove(note);
                     // this will rebind the row in "normal" state
-                    notifyItemChanged(getCursor().getPosition());
+                    notifyItemChanged(viewHolder.getAdapterPosition());
                 }
             });
         } else {
@@ -85,31 +83,34 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
             viewHolder.flNoteEntry.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onItemTouchListener.onNoteEntryClick(v, getCursor().getPosition());
+                    getCursor().moveToPosition(viewHolder.getAdapterPosition());
+                    onItemTouchListener.onNoteEntryClick(getCursor());
+                    notifyItemChanged(viewHolder.getAdapterPosition());
                 }
             });
         }
     }
 
-    void remove(Cursor cursor) {
-        int position = cursor.getPosition();
+    void remove(int pos) {
+        getCursor().moveToPosition(pos);
         NoteEntry noteToDelete = new NoteEntry(
-                cursor.getLong(0), cursor.getString(1), cursor.getString(2), 0);
+                getCursor().getLong(0), getCursor().getString(1), getCursor().getString(2), 0);
         NoteDBHelper db = new NoteDBHelper(context);
         db.open();
         if (notesToRemove.contains(noteToDelete)) {
             if (db.deleteNote(noteToDelete)) {
                 notesToRemove.remove(noteToDelete);
-                notifyItemRemoved(position);
+                changeCursor(db.getNotes());
+                getCursor().moveToFirst();
                 notifyDataSetChanged();
             }
         } else {
             Toast.makeText(context, "Failed to delete note", Toast.LENGTH_SHORT).show();
         }
-        db.close();
+//        db.close();
     }
 
-    void pendingRemoval(int pos) {
+    void pendingRemoval(final int pos) {
         getCursor().moveToPosition(pos);
         final NoteEntry note = new NoteEntry(
                 getCursor().getLong(0), getCursor().getString(1), getCursor().getString(2), 0);
@@ -121,7 +122,7 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
             Runnable pendingRemovalRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    remove(getCursor());
+                    remove(pos);
                 }
             };
             handler.postDelayed(pendingRemovalRunnable, REMOVAL_TIME);
