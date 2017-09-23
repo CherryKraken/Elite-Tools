@@ -19,9 +19,20 @@ import java.util.ArrayList;
  */
 
 public class GetModulesTask extends AsyncTask<String, Void, ArrayList<String>> {
+    private BlueprintsActivity caller;
+
+    GetModulesTask(BlueprintsActivity caller) {
+        this.caller = caller;
+    }
+
     @Override
     protected ArrayList<String> doInBackground(String... params) {
         return getModuleList(params[0]);
+    }
+
+    @Override
+    protected void onPostExecute(ArrayList<String> strings) {
+        caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.MODULES, strings);
     }
 
     private ArrayList<String> getModuleList(String url) {
@@ -31,7 +42,6 @@ public class GetModulesTask extends AsyncTask<String, Void, ArrayList<String>> {
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
-            JsonParser jp = new JsonParser();
             jr.beginObject();
             while (jr.hasNext()) {
                 moduleNames.add(jr.nextName());
@@ -39,7 +49,7 @@ public class GetModulesTask extends AsyncTask<String, Void, ArrayList<String>> {
                 jr.skipValue();
             }
             jr.endObject();
-            jr.close();
+            jr.close(); // also closes BufferedReader
             is.close();
         } catch (IOException e) {
             e.printStackTrace();

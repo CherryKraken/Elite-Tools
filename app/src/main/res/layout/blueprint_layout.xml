@@ -12,7 +12,7 @@
         android:textAlignment="center"/>
 
     <Spinner
-        android:id="@+id/spinnerParts"
+        android:id="@+id/selModules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog" />
@@ -29,8 +29,63 @@
         android:textAlignment="center"/>
 
     <Spinner
-        android:id="@+id/spinnerMods"
+        android:id="@+id/selModifications"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:spinnerMode="dialog" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grade"
+        android:textAlignment="center" />
+
+    <RadioGroup
+        android:id="@+id/rbGrades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5" />
+
+    </RadioGroup>
+
 </LinearLayout>
