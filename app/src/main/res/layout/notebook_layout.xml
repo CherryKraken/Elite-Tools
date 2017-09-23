@@ -9,9 +9,9 @@
         android:layout_height="wrap_content"
         android:text="Create a new note" />
 
-    <ListView
-        android:id="@+id/lvNotebook"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvNotebook"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
