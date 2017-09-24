@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_notes"
-            android:icon="@drawable/ic_notepad"
-            android:title="Notepad"/>
-        <item
-            android:id="@+id/nav_engineers"
-            android:icon="@drawable/ic_engineer"
-            android:title="Engineers" />
-        <item
-            android:id="@+id/nav_blueprints"
-            android:icon="@drawable/ic_modules"
-            android:title="Blueprints" />
-        <item
-            android:id="@+id/nav_materials"
-            android:icon="@drawable/ic_search"
-            android:title="Materials" />
-        <item
-            android:id="@+id/nav_bearing"
-            android:icon="@drawable/ic_bearing"
-            android:title="Bearing Calculator" />
-        <item
-            android:id="@+id/nav_hzc"
-            android:icon="@drawable/ic_planet"
-            android:title="Habitable Zone Calculator"/>
-    </group>
+    <item
+        android:title="Elite Tools">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_notes"
+                    android:icon="@drawable/ic_notepad"
+                    android:title="Notepad"/>
+                <item
+                    android:id="@+id/nav_engineers"
+                    android:icon="@drawable/ic_engineer"
+                    android:title="Engineers" />
+                <item
+                    android:id="@+id/nav_blueprints"
+                    android:icon="@drawable/ic_modules"
+                    android:title="Blueprints" />
+                <item
+                    android:id="@+id/nav_materials"
+                    android:icon="@drawable/ic_search"
+                    android:title="Materials" />
+                <item
+                    android:id="@+id/nav_bearing"
+                    android:icon="@drawable/ic_bearing"
+                    android:title="Bearing Calculator" />
+                <item
+                    android:id="@+id/nav_hzc"
+                    android:icon="@drawable/ic_planet"
+                    android:title="Habitable Zone Calculator"/>
+            </group>
+        </menu>
+    </item>
     <item android:title="External Links">
         <menu>
             <group android:checkableBehavior="none">
