@@ -1,6 +1,8 @@
 package com.connorboyle.elitetools;
 
+import android.app.DialogFragment;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -63,6 +66,14 @@ public class BlueprintsActivity extends Fragment {
         }
     }
 
+    void onRecipeTaskCompleted(Recipe recipe) {
+        Bundle b = new Bundle();
+        b.putSerializable("recipe", recipe);
+        DialogFragment dialog = new RecipeDialog();
+        dialog.setArguments(b);
+        dialog.show(getActivity().getFragmentManager(), "recipe");
+    }
+
     private void setupControls() {
         selModules = (Spinner) v.findViewById(R.id.selModules);
         selModifications = (Spinner) v.findViewById(R.id.selModifications);
@@ -106,6 +117,17 @@ public class BlueprintsActivity extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
+        });
+
+        rbGrades.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                RadioButton rb = (RadioButton) group.findViewById(checkedId);
+                String grade = rb.getText().toString();
+                String module = selModules.getSelectedItem().toString();
+                String modification = selModifications.getSelectedItem().toString();
+                new GetRecipeTask((getThisClass())).execute(module, modification, grade, MODULES_JSON_URL);
+            }
         });
     }
 
