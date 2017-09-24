@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
+
+        try {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.flContent, Notebook.class.newInstance())
+                    .commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void setupDrawerContent(NavigationView nv) {
