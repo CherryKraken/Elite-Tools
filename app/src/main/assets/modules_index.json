@@ -1,0 +1,875 @@
+{
+  "Beam Laser": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "dweller",
+        "name": "The Dweller",
+        "grade": "3"
+      },
+      {
+        "id": "tarquin",
+        "name": "Broo Tarquin",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Concordant Sequence",
+      "Regeneration Sequence",
+      "Thermal Conduit",
+      "Thermal Shock",
+      "Thermal Vent"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Burst Laser": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "dweller",
+        "name": "The Dweller",
+        "grade": "3"
+      },
+      {
+        "id": "tarquin",
+        "name": "Broo Tarquin",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Concordant Sequence",
+      "Inertial Impact",
+      "Phasing Sequence",
+      "Scramble Spectrum",
+      "Thermal Shock"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "Focused",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Rapid Fire",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Pulse Laser": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "dweller",
+        "name": "The Dweller",
+        "grade": "4"
+      },
+      {
+        "id": "tarquin",
+        "name": "Broo Tarquinn",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Concordant Sequence",
+      "Emissive Munitions",
+      "Phasing Sequence",
+      "Scramble Spectrum",
+      "Thermal Shock"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "Focused",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Rapid Fire",
+      "Sturdy"
+    ]
+  },
+  "Cannon": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "blaster",
+        "name": "The Blaster",
+        "grade": "2"
+      },
+      {
+        "id": "sarge",
+        "name": "The Sarge",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Auto Loader",
+      "Dispersal Field",
+      "Smart Rounds",
+      "Force Shell",
+      "High Yield Shell",
+      "Thermal Cascade"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "High Capacity",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Rapid Fire",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Multi-Cannon": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "nemo",
+        "name": "Zacariah Nemo",
+        "grade": "3"
+      },
+      {
+        "id": "blaster",
+        "name": "The Blaster",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Auto Loader",
+      "Corrosive Shell",
+      "Emissive Munitions",
+      "Incendiary Rounds",
+      "Smart Rounds",
+      "Thermal Shock"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "High Capacity",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Rapid Fire",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Fragment Cannon": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "blaster",
+        "name": "The Blaster",
+        "grade": "3"
+      },
+      {
+        "id": "nemo",
+        "name": "Zacariah Nemo",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Corrosive Shell",
+      "Dazzle Shell",
+      "Incendiary Rounds",
+      "Drag Munition",
+      "Screening Shell"
+    ],
+    "Blueprints": [
+      "Double Shot",
+      "Efficient",
+      "High Capacity",
+      "Lightweight",
+      "Overcharged",
+      "Rapid Fire",
+      "Sturdy"
+    ]
+  },
+  "Plasma Accelerator": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "nemo",
+        "name": "Zacariah Nemo",
+        "grade": "2"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Dazzle Shell",
+      "Dispersal Field",
+      "Phasing Sequence",
+      "Target Lock Breaker",
+      "Thermal Conduit",
+      "Plasma Slug"
+    ],
+    "Blueprints": [
+      "Efficient",
+      "Focused",
+      "Lightweight",
+      "Long Range",
+      "Overcharged",
+      "Rapid Fire",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Rail Gun": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "sarge",
+        "name": "The Sarge",
+        "grade": "3"
+      },
+      {
+        "id": "blaster",
+        "name": "The Blaster",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Feedback Cascade",
+      "Plasma Slug",
+      "Super Penetrator"
+    ],
+    "Blueprints": [
+      "High Capacity",
+      "Lightweight",
+      "Long Range",
+      "Short Range",
+      "Sturdy"
+    ]
+  },
+  "Mine Launcher": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "ryder",
+        "name": "Liz Ryder",
+        "grade": "3"
+      },
+      {
+        "id": "juri",
+        "name": "Juri Ishmaak",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Ion Disruptor",
+      "Overload Munitions",
+      "Radiant Canister",
+      "Reverberating Cascade",
+      "Shift-Lock Canister",
+      "Emissive Munitions"
+    ],
+    "Blueprints": [
+      "High Capacity",
+      "Lightweight",
+      "Rapid Fire",
+      "Sturdy"
+    ]
+  },
+  "Missile Rack": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "juri",
+        "name": "Juri Ishmaak",
+        "grade": "3"
+      },
+      {
+        "id": "ryder",
+        "name": "Liz Ryder",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Drag Munition",
+      "Emissive Munitions",
+      "Overload Munitions",
+      "Penetrator Munitions",
+      "Thermal Cascade",
+      "FSD Interrupt"
+    ],
+    "Blueprints": [
+      "High Capacity",
+      "Lightweight",
+      "Rapid Fire",
+      "Sturdy"
+    ]
+  },
+  "Torpedo Pylon": {
+    "Type": "hardpoint",
+    "Engineers": [
+      {
+        "id": "juri",
+        "name": "Juri Ishmaak",
+        "grade": "3"
+      },
+      {
+        "id": "ryder",
+        "name": "Liz Ryder",
+        "grade": "5"
+      }
+    ],
+    "Experimental": [
+      "Mass Lock Munition",
+      "Penetrator Payload",
+      "Reverberating Cascade"
+    ],
+    "Blueprints": [
+      "Lightweight",
+      "Sturdy"
+    ]
+  },
+  "Chaff Launcher": {
+    "Type": "counter",
+    "Engineers": [
+      {
+        "id": "ramtah",
+        "name": "Ram Tah",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Ammo Capacity",
+      "Lightweight",
+      "Reinforced",
+      "Shielded"
+    ]
+  },
+  "Electronic Countermeasure": {
+    "Type": "counter",
+    "Engineers": [
+      {
+        "id": "ramtah",
+        "name": "Ram Tah",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Lightweight",
+      "Reinforced",
+      "Shielded"
+    ]
+  },
+  "Heat Sink Launcher": {
+    "Type": "counter",
+    "Engineers": [
+      {
+        "id": "ramtah",
+        "name": "Ram Tah",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Ammo Capacity",
+      "Lightweight",
+      "Reinforced",
+      "Shielded"
+    ]
+  },
+  "Point Defence": {
+    "Type": "counter",
+    "Engineers": [
+      {
+        "id": "ramtah",
+        "name": "Ram Tah",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Ammo Capacity",
+      "Lightweight",
+      "Reinforced",
+      "Shielded"
+    ]
+  },
+  "Frame Shift Wake Scanner": {
+    "Type": "util-scanner",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "3"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Fast Scan",
+      "Lightweight",
+      "Long Range",
+      "Reinforced",
+      "Shielded",
+      "Wide Angle"
+    ]
+  },
+  "Kill Warrant Scanner": {
+    "Type": "util-scanner",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "3"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Fast Scan",
+      "Lightweight",
+      "Long Range",
+      "Reinforced",
+      "Shielded",
+      "Wide Angle"
+    ]
+  },
+  "Manifest Scanner": {
+    "Type": "util-scanner",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "3"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Fast Scan",
+      "Lightweight",
+      "Long Range",
+      "Reinforced",
+      "Shielded",
+      "Wide Angle"
+    ]
+  },
+  "Shield Booster": {
+    "Type": "booster",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "1"
+      },
+      {
+        "id": "cheung",
+        "name": "Lei Cheung",
+        "grade": "3"
+      },
+      {
+        "id": "didi",
+        "name": "Didi Vatermann",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Blast Resistant",
+      "Heavy Duty",
+      "Kinetic Resistant",
+      "Resistance Augmented",
+      "Thermal Resistance"
+    ]
+  },
+  "Power Plant": {
+    "Type": "plant",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "1"
+      },
+      {
+        "id": "qwent",
+        "name": "Marco Qwent",
+        "grade": "4"
+      },
+      {
+        "id": "tani",
+        "name": "Hera Tani",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Armoured",
+      "Low Emissions",
+      "Overcharged"
+    ]
+  },
+  "Thrusters": {
+    "Type": "drives",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "3"
+      },
+      {
+        "id": "elvira",
+        "name": "Elvira Martuuk",
+        "grade": "2"
+      },
+      {
+        "id": "palin",
+        "name": "Prof. Palin",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Clean",
+      "Dirty",
+      "Reinforced"
+    ]
+  },
+  "Frame Shift Drive": {
+    "Type": "fsd",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "5"
+      },
+      {
+        "id": "elvira",
+        "name": "Elvira Martuuk",
+        "grade": "5"
+      },
+      {
+        "id": "palin",
+        "name": "Prof. Palin",
+        "grade": "3"
+      },
+      {
+        "id": "dekker",
+        "name": "Col. Bris Dekker",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Faster Boot Sequence",
+      "Increased Range",
+      "Shielded"
+    ]
+  },
+  "Life Support": {
+    "Type": "life-support",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "4"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Lightweight",
+      "Reinforced",
+      "Shielded"
+    ]
+  },
+  "Power Distributor": {
+    "Type": "distributor",
+    "Engineers": [
+      {
+        "id": "dweller",
+        "name": "The Dweller",
+        "grade": "5"
+      },
+      {
+        "id": "qwent",
+        "name": "Marco Qwent",
+        "grade": "3"
+      },
+      {
+        "id": "tani",
+        "name": "Hera Tani",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Charge Enhanced",
+      "Engine Focused",
+      "High Charge Capacity",
+      "Shielded",
+      "System Focused",
+      "Weapon Focused"
+    ]
+  },
+  "Sensors": {
+    "Type": "sensors",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "3"
+      },
+      {
+        "id": "cheung",
+        "name": "Lei Cheung",
+        "grade": "5"
+      },
+      {
+        "id": "tani",
+        "name": "Hera Tani",
+        "grade": "3"
+      },
+      {
+        "id": "juri",
+        "name": "Juri Ishmaak",
+        "grade": "5"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "5"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "5"
+      },
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Lightweight",
+      "Long Range",
+      "Wide Angle"
+    ]
+  },
+  "Auto Field-Maintenance Unit": {
+    "Type": "afmu",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "4"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Shielded"
+    ]
+  },
+  "Armour": {
+    "Type": "armour",
+    "Engineers": [
+      {
+        "id": "ryder",
+        "name": "Liz Ryder",
+        "grade": "1"
+      },
+      {
+        "id": "selene",
+        "name": "Selene",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Blast Resistant",
+      "Heavy Duty",
+      "Kinetic Resistant",
+      "Lightweight",
+      "Thermal Resistant"
+    ]
+  },
+  "Hull Reinforcement Package": {
+    "Type": "hrp",
+    "Engineers": [
+      {
+        "id": "ryder",
+        "name": "Liz Ryder",
+        "grade": "1"
+      },
+      {
+        "id": "selene",
+        "name": "Selene",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Blast Resistant",
+      "Heavy Duty",
+      "Kinetic Resistant",
+      "Lightweight",
+      "Thermal Resistant"
+    ]
+  },
+  "Frame Shift Drive Interdictor": {
+    "Type": "interdictor",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "1"
+      },
+      {
+        "id": "dekker",
+        "name": "Col. Bris Dekker",
+        "grade": "4"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Expanded Capture Arc",
+      "Long Range"
+    ]
+  },
+  "Fuel Scoop": {
+    "Type": "scoop",
+    "Engineers": [
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "4"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Shielded"
+    ]
+  },
+  "Shield Generator": {
+    "Type": "shield",
+    "Engineers": [
+      {
+        "id": "elvira",
+        "name": "Elvira Martuuk",
+        "grade": "3"
+      },
+      {
+        "id": "didi",
+        "name": "Didi Vatermann",
+        "grade": "3"
+      },
+      {
+        "id": "cheung",
+        "name": "Lei Cheung",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Enhanced Low Power",
+      "Kinetic Resistant",
+      "Reinforced",
+      "Thermal Resistant"
+    ]
+  },
+  "Shield Cell Bank": {
+    "Type": "scb",
+    "Engineers": [
+      {
+        "id": "elvira",
+        "name": "Elvira Martuuk",
+        "grade": "1"
+      },
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "3"
+      }
+    ],
+    "Blueprints": [
+      "Rapid Charge",
+      "Specialized"
+    ]
+  },
+  "Detailed Surface Scanner": {
+    "Type": "dss",
+    "Engineers": [
+      {
+        "id": "farseer",
+        "name": "Felicity Farseer",
+        "grade": "3"
+      },
+      {
+        "id": "cheung",
+        "name": "Lei Cheung",
+        "grade": "5"
+      },
+      {
+        "id": "tani",
+        "name": "Hera Tani",
+        "grade": ""
+      },
+      {
+        "id": "juri",
+        "name": "Juri Ishmaak",
+        "grade": "5"
+      },
+      {
+        "id": "tiana",
+        "name": "Tiana Fortune",
+        "grade": "3"
+      },
+      {
+        "id": "turner",
+        "name": "Bill Turner",
+        "grade": "5"
+      },
+      {
+        "id": "jameson",
+        "name": "Lori Jameson",
+        "grade": "5"
+      }
+    ],
+    "Blueprints": [
+      "Fast Scan",
+      "Long Range",
+      "Wide Angle"
+    ]
+  }
+}
