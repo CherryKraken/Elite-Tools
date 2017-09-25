@@ -332,7 +332,7 @@
     ]
   },
   "Chaff Launcher": {
-    "Type": "counter",
+    "Type": "util",
     "Engineers": [
       {
         "id": "ramtah",
@@ -348,7 +348,7 @@
     ]
   },
   "Electronic Countermeasure": {
-    "Type": "counter",
+    "Type": "util",
     "Engineers": [
       {
         "id": "ramtah",
@@ -363,7 +363,7 @@
     ]
   },
   "Heat Sink Launcher": {
-    "Type": "counter",
+    "Type": "util",
     "Engineers": [
       {
         "id": "ramtah",
@@ -379,7 +379,7 @@
     ]
   },
   "Point Defence": {
-    "Type": "counter",
+    "Type": "util",
     "Engineers": [
       {
         "id": "ramtah",
@@ -395,7 +395,7 @@
     ]
   },
   "Frame Shift Wake Scanner": {
-    "Type": "util-scanner",
+    "Type": "util",
     "Engineers": [
       {
         "id": "jameson",
@@ -423,7 +423,7 @@
     ]
   },
   "Kill Warrant Scanner": {
-    "Type": "util-scanner",
+    "Type": "util",
     "Engineers": [
       {
         "id": "jameson",
@@ -451,7 +451,7 @@
     ]
   },
   "Manifest Scanner": {
-    "Type": "util-scanner",
+    "Type": "util",
     "Engineers": [
       {
         "id": "jameson",
@@ -824,7 +824,7 @@
     ],
     "Blueprints": [
       "Rapid Charge",
-      "Specialized"
+      "Specialised"
     ]
   },
   "Detailed Surface Scanner": {

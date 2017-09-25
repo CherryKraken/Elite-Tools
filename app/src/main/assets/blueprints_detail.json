@@ -1,0 +1,2581 @@
+{
+  "efficient-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            0,
+            4
+          ]
+        },
+        {
+          "Thermal Load": [
+            -30,
+            -40
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Sulphur",
+        "Heat Dispersion Plate"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            1,
+            5
+          ]
+        },
+        {
+          "Power Draw": [
+            0,
+            -10
+          ]
+        },
+        {
+          "Thermal Load": [
+            -36,
+            -45
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chromium",
+        "Exceptional Scrambled Emission Data",
+        "Heat Exchangers"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            1,
+            7
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -15,
+            -25
+          ]
+        },
+        {
+          "Power Draw": [
+            -6,
+            -20
+          ]
+        },
+        {
+          "Thermal Load": [
+            -40,
+            -50
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Selenium",
+        "Irregular Emission Data",
+        "Heat Vanes"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            3,
+            8
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -20,
+            -30
+          ]
+        },
+        {
+          "Power Draw": [
+            -10,
+            -30
+          ]
+        },
+        {
+          "Thermal Load": [
+            -45,
+            -56
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Cadmium",
+        "Unexpected Emission Data",
+        "Proto Heat Radiators"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            3,
+            9
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -25,
+            -36
+          ]
+        },
+        {
+          "Power Draw": [
+            -15,
+            -40
+          ]
+        },
+        {
+          "Thermal Load": [
+            -50,
+            -60
+          ]
+        }
+      ]
+    }
+  },
+  "lightweight-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        {
+          "Distributor Draw": [
+            -2,
+            -4
+          ]
+        },
+        {
+          "Integrity": [
+            -20,
+            0
+          ]
+        },
+        {
+          "Mass": [
+            -10,
+            -15
+          ]
+        },
+        {
+          "Power Draw": [
+            -2,
+            -4
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        {
+          "Distributor Draw": [
+            -4,
+            -8
+          ]
+        },
+        {
+          "Integrity": [
+            -30,
+            -10
+          ]
+        },
+        {
+          "Mass": [
+            -20,
+            -36
+          ]
+        },
+        {
+          "Power Draw": [
+            -4,
+            -8
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Manganese",
+        "Salvaged Alloys",
+        "Conductive Ceramics"
+      ],
+      "effects": [
+        {
+          "Distributor Draw": [
+            -6,
+            -12
+          ]
+        },
+        {
+          "Integrity": [
+            -40,
+            -20
+          ]
+        },
+        {
+          "Mass": [
+            -30,
+            -56
+          ]
+        },
+        {
+          "Power Draw": [
+            -6,
+            -12
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Components",
+        "Phase Alloys",
+        "Proto Light Alloys"
+      ],
+      "effects": [
+        {
+          "Distributor Draw": [
+            -8,
+            -16
+          ]
+        },
+        {
+          "Integrity": [
+            -50,
+            -30
+          ]
+        },
+        {
+          "Mass": [
+            -40,
+            -75
+          ]
+        },
+        {
+          "Power Draw": [
+            -8,
+            -16
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Proto Radiolic Alloys",
+        "Proto Light Alloys"
+      ],
+      "effects": [
+        {
+          "Distributor Draw": [
+            -10,
+            -20
+          ]
+        },
+        {
+          "Integrity": [
+            -60,
+            -40
+          ]
+        },
+        {
+          "Mass": [
+            -50,
+            -90
+          ]
+        },
+        {
+          "Power Draw": [
+            -10,
+            -20
+          ]
+        }
+      ]
+    }
+  },
+  "high-capacity-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        {
+          "Ammo Maximum": [
+            10,
+            60
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            10,
+            60
+          ]
+        },
+        {
+          "Mass": [
+            25,
+            10
+          ]
+        },
+        {
+          "Power Draw": [
+            20,
+            10
+          ]
+        },
+        {
+          "Reload Timer": [
+            20,
+            0
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Mechanical Scrap",
+        "Vanadium"
+      ],
+      "effects": [
+        {
+          "Ammo Maximum": [
+            20,
+            70
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            20,
+            70
+          ]
+        },
+        {
+          "Mass": [
+            50,
+            20
+          ]
+        },
+        {
+          "Power Draw": [
+            25,
+            14
+          ]
+        },
+        {
+          "Reload Timer": [
+            40,
+            10
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Mechanical Scrap",
+        "Niobium Ceramics",
+        "Vanadium"
+      ],
+      "effects": [
+        {
+          "Ammo Maximum": [
+            30,
+            80
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            30,
+            80
+          ]
+        },
+        {
+          "Mass": [
+            75,
+            30
+          ]
+        },
+        {
+          "Power Draw": [
+            30,
+            20
+          ]
+        },
+        {
+          "Reload Timer": [
+            60,
+            20
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "High Density Composites",
+        "Mechanical Equipment",
+        "Tin"
+      ],
+      "effects": [
+        {
+          "Ammo Maximum": [
+            40,
+            90
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            40,
+            90
+          ]
+        },
+        {
+          "Mass": [
+            100,
+            40
+          ]
+        },
+        {
+          "Power Draw": [
+            35,
+            25
+          ]
+        },
+        {
+          "Reload Timer": [
+            80,
+            30
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Mechanical Components",
+        "Military Supercapacitors",
+        "Proprietary Composites"
+      ],
+      "effects": [
+        {
+          "Ammo Maximum": [
+            50,
+            100
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            50,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            125,
+            50
+          ]
+        },
+        {
+          "Power Draw": [
+            40,
+            30
+          ]
+        },
+        {
+          "Reload Timer": [
+            100,
+            40
+          ]
+        }
+      ]
+    }
+  },
+  "long-range-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        {
+          "Damage Falloff Start": [
+            100,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            10,
+            0
+          ]
+        },
+        {
+          "Range": [
+            10,
+            20
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Sulphur",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        {
+          "Damage Falloff Start": [
+            100,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            20,
+            4
+          ]
+        },
+        {
+          "Range": [
+            20,
+            40
+          ]
+        },
+        {
+          "Power Draw": [
+            4,
+            0
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Sulphur",
+        "Modified Consumer Firmware",
+        "Focus Crystals"
+      ],
+      "effects": [
+        {
+          "Damage Falloff Start": [
+            100,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            30,
+            10
+          ]
+        },
+        {
+          "Range": [
+            30,
+            60
+          ]
+        },
+        {
+          "Power Draw": [
+            10,
+            4
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Polymers",
+        "Focus Crystals",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        {
+          "Damage Falloff Start": [
+            100,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            40,
+            14
+          ]
+        },
+        {
+          "Range": [
+            40,
+            80
+          ]
+        },
+        {
+          "Power Draw": [
+            14,
+            10
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Biotech Conductors",
+        "Cracked Industrial Firmware",
+        "Thermic Alloys"
+      ],
+      "effects": [
+        {
+          "Damage Falloff Start": [
+            100,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            50,
+            20
+          ]
+        },
+        {
+          "Range": [
+            50,
+            100
+          ]
+        },
+        {
+          "Power Draw": [
+            20,
+            14
+          ]
+        }
+      ]
+    }
+  },
+  "overcharged-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        {
+          "Ammo Clip Size": [
+            -5,
+            -4
+          ]
+        },
+        {
+          "Damage": [
+            14,
+            25
+          ]
+        },
+        {
+          "Distributor Draw": [
+            90,
+            45
+          ]
+        },
+        {
+          "Jitter": [
+            1,
+            0.4
+          ]
+        },
+        {
+          "Thermal Load": [
+            45,
+            30
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Nickel",
+        "Conductive Components"
+      ],
+      "effects": [
+        {
+          "Ammo Clip Size": [
+            -10,
+            -6
+          ]
+        },
+        {
+          "Damage": [
+            20,
+            30
+          ]
+        },
+        {
+          "Distributor Draw": [
+            80,
+            40
+          ]
+        },
+        {
+          "Jitter": [
+            0.8,
+            0.3
+          ]
+        },
+        {
+          "Thermal Load": [
+            30,
+            14
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Nickel",
+        "Conductive Components",
+        "Electrochemical Arrays"
+      ],
+      "effects": [
+        {
+          "Ammo Clip Size": [
+            -16,
+            -10
+          ]
+        },
+        {
+          "Damage": [
+            25,
+            35
+          ]
+        },
+        {
+          "Distributor Draw": [
+            70,
+            35
+          ]
+        },
+        {
+          "Jitter": [
+            0.6,
+            0.2
+          ]
+        },
+        {
+          "Thermal Load": [
+            14,
+            0
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Polymer Capacitors",
+        "Zinc"
+      ],
+      "effects": [
+        {
+          "Ammo Clip Size": [
+            -20,
+            -12
+          ]
+        },
+        {
+          "Damage": [
+            30,
+            40
+          ]
+        },
+        {
+          "Distributor Draw": [
+            60,
+            30
+          ]
+        },
+        {
+          "Jitter": [
+            0.4,
+            0.1
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Conductive Polymers",
+        "Modified Embedded Firmware",
+        "Zirconium"
+      ],
+      "effects": [
+        {
+          "Ammo Clip Size": [
+            -25,
+            -16
+          ]
+        },
+        {
+          "Damage": [
+            35,
+            45
+          ]
+        },
+        {
+          "Distributor Draw": [
+            50,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  "rapid-fire-harpoint": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            -8,
+            -6
+          ]
+        },
+        {
+          "Jitter": [
+            2.5,
+            1.25
+          ]
+        },
+        {
+          "Reload Time": [
+            -10,
+            -25
+          ]
+        },
+        {
+          "Rate of Fire": [
+            17,
+            25
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Mechanical Scrap",
+        "Heat Disperion Plate"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            -10,
+            -8
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -10,
+            -20
+          ]
+        },
+        {
+          "Jitter": [
+            2,
+            1
+          ]
+        },
+        {
+          "Reload Time": [
+            -20,
+            -36
+          ]
+        },
+        {
+          "Rate of Fire": [
+            25,
+            34
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Mechanical Equipment",
+        "Precipitated Alloys",
+        "Specialized Legacy Firmware"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            -10,
+            -10
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -15,
+            -25
+          ]
+        },
+        {
+          "Jitter": [
+            1.5,
+            0.75
+          ]
+        },
+        {
+          "Reload Time": [
+            -30,
+            -40
+          ]
+        },
+        {
+          "Rate of Fire": [
+            34,
+            42
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Mechanical Equipment",
+        "Modified Consumer Firmware",
+        "Thermic Alloys"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            -13,
+            -10
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -20,
+            -30
+          ]
+        },
+        {
+          "Jitter": [
+            1,
+            0.5
+          ]
+        },
+        {
+          "Reload Time": [
+            -40,
+            -56
+          ]
+        },
+        {
+          "Rate of Fire": [
+            42,
+            53
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Configurable Components",
+        "Precipitated Alloys",
+        "Technetium"
+      ],
+      "effects": [
+        {
+          "Damage": [
+            -15,
+            -13
+          ]
+        },
+        {
+          "Distributor Draw": [
+            -25,
+            -36
+          ]
+        },
+        {
+          "Jitter": [
+            0.5,
+            0.25
+          ]
+        },
+        {
+          "Reload Time": [
+            -50,
+            -65
+          ]
+        },
+        {
+          "Rate of Fire": [
+            53,
+            66
+          ]
+        }
+      ]
+    }
+  },
+  "sturdy-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            20,
+            50
+          ]
+        },
+        {
+          "Mass": [
+            50,
+            0
+          ]
+        },
+        {
+          "Thermal Load": [
+            0,
+            -10
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            40,
+            100
+          ]
+        },
+        {
+          "Mass": [
+            100,
+            50
+          ]
+        },
+        {
+          "Thermal Load": [
+            -6,
+            -15
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters",
+        "Tungsten"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            60,
+            150
+          ]
+        },
+        {
+          "Mass": [
+            150,
+            100
+          ]
+        },
+        {
+          "Armour Piercing": [
+            0,
+            14
+          ]
+        },
+        {
+          "Thermal Load": [
+            -10,
+            -20
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Molybdenum",
+        "Tungsten",
+        "Zinc"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            80,
+            200
+          ]
+        },
+        {
+          "Mass": [
+            200,
+            150
+          ]
+        },
+        {
+          "Armour Piercing": [
+            10,
+            30
+          ]
+        },
+        {
+          "Thermal Load": [
+            -15,
+            -25
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "High Density Composites",
+        "Molybdenum",
+        "Technetium"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            100,
+            250
+          ]
+        },
+        {
+          "Mass": [
+            250,
+            200
+          ]
+        },
+        {
+          "Armour Piercing": [
+            20,
+            45
+          ]
+        },
+        {
+          "Thermal Load": [
+            -20,
+            -30
+          ]
+        }
+      ]
+    }
+  },
+  "focused-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        {
+          "Range": [
+            10,
+            20
+          ]
+        },
+        {
+          "Rate of Fire": [
+            -17,
+            -8
+          ]
+        },
+        {
+          "Thermal Load": [
+            50,
+            40
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Iron"
+      ],
+      "effects": [
+        {
+          "Armour Piercing": [
+            0,
+            10
+          ]
+        },
+        {
+          "Range": [
+            20,
+            40
+          ]
+        },
+        {
+          "Rate of Fire": [
+            -15,
+            -6
+          ]
+        },
+        {
+          "Thermal Load": [
+            40,
+            30
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chromium",
+        "Conductive Ceramics",
+        "Iron"
+      ],
+      "effects": [
+        {
+          "Armour Piercing": [
+            10,
+            20
+          ]
+        },
+        {
+          "Range": [
+            30,
+            60
+          ]
+        },
+        {
+          "Rate of Fire": [
+            -10,
+            -4
+          ]
+        },
+        {
+          "Thermal Load": [
+            30,
+            20
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Focus Crystals",
+        "Germanium",
+        "Polymer Capacitors"
+      ],
+      "effects": [
+        {
+          "Armour Piercing": [
+            20,
+            40
+          ]
+        },
+        {
+          "Range": [
+            40,
+            80
+          ]
+        },
+        {
+          "Rate of Fire": [
+            -8,
+            -2
+          ]
+        },
+        {
+          "Thermal Load": [
+            20,
+            10
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Military Supercapacitors",
+        "Niobium",
+        "Refined Focus Crystals"
+      ],
+      "effects": [
+        {
+          "Armour Piercing": [
+            30,
+            60
+          ]
+        },
+        {
+          "Range": [
+            50,
+            100
+          ]
+        },
+        {
+          "Rate of Fire": [
+            -4,
+            0
+          ]
+        },
+        {
+          "Thermal Load": [
+            10,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "double-shot-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Carbon"
+      ],
+      "effects": [
+        {
+          "Burst": [
+            2,
+            2
+          ]
+        },
+        {
+          "Burst Rate Of Fire": [
+            10,
+            15
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            34,
+            34
+          ]
+        },
+        {
+          "Range": [
+            -25,
+            -10
+          ]
+        }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Mechanical Equipment"
+      ],
+      "effects": [
+        {
+          "Burst": [
+            2,
+            2
+          ]
+        },
+        {
+          "Burst Rate Of Fire": [
+            11,
+            16
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            34,
+            34
+          ]
+        },
+        {
+          "Range": [
+            -20,
+            -8
+          ]
+        }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "Cracked Industrial Firmware",
+        "Mechanical Equipment"
+      ],
+      "effects": [
+        {
+          "Burst": [
+            2,
+            2
+          ]
+        },
+        {
+          "Burst Rate Of Fire": [
+            12,
+            17
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            34,
+            100
+          ]
+        },
+        {
+          "Range": [
+            -15,
+            -6
+          ]
+        }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Mechanical Components",
+        "Security Firmware Patch",
+        "Vanadium"
+      ],
+      "effects": [
+        {
+          "Burst": [
+            2,
+            2
+          ]
+        },
+        {
+          "Burst Rate Of Fire": [
+            13,
+            18
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            100,
+            100
+          ]
+        },
+        {
+          "Range": [
+            -10,
+            -4
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Configurable Components",
+        "High Density Composites",
+        "Modified Embedded Firmware"
+      ],
+      "effects": [
+        {
+          "Burst": [
+            2,
+            2
+          ]
+        },
+        {
+          "Burst Rate Of Fire": [
+            14,
+            19
+          ]
+        },
+        {
+          "Ammo Clip Size": [
+            100,
+            100
+          ]
+        },
+        {
+          "Range": [
+            -5,
+            -2
+          ]
+        }
+      ]
+    }
+  },
+  "short-range-hardpoint": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Damage": [3, 9] },
+        { "Range": [-35, -10] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Nickel",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        { "Damage": [8, 18] },
+        { "Range": [-45, -20] },
+        { "Thermal Load": [20, 10] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Nickel",
+        "Modified Consumer Firmware",
+        "Electrochemical Arrays"
+      ],
+      "effects": [
+        { "Damage": [10, 26] },
+        { "Integrity": [-20, -10] },
+        { "Range": [-56, -30] },
+        { "Thermal Load": [30, 20] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Polymers",
+        "Electrochemical Arrays",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        { "Damage": [15, 35] },
+        { "Integrity": [-30, -20] },
+        { "Range": [-65, -40] },
+        { "Thermal Load": [40, 30] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Biotech Conductors",
+        "Cracker Industrial Firmware",
+        "Configurable Components"
+      ],
+      "effects": [
+        { "Damage": [20, 45] },
+        { "Integrity": [-40, -30] },
+        { "Range": [-75, -50] },
+        { "Thermal Load": [50, 40] }
+      ]
+    }
+  },
+  "fast-scan-util": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-40, -10] },
+        { "Range": [-10, -5] },
+        { "Scan Time": [-10, -40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Flawed Focus Crystals",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-50, -20] },
+        { "Range": [-20, -10] },
+        { "Scan Time": [-20, -50] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Flawed Focus Crystals",
+        "Open Symmetric Keys",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-60, -30] },
+        { "Range": [-30, -15] },
+        { "Scan Time": [-30, -60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Atypical Encryption Values",
+        "Focus Crystals",
+        "Manganese"
+      ],
+      "effects": [
+        { "Integrity": [-70, -40] },
+        { "Range": [-40, -20] },
+        { "Scan Time": [-40, -70] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Adaptive Encryptors Capture",
+        "Arsenic",
+        "Refined Focus Crystals"
+      ],
+      "effects": [
+        { "Integrity": [-80, -50] },
+        { "Range": [-50, -20] },
+        { "Scan Time": [-50, -80] }
+      ]
+    }
+  },
+  "lightweight-util": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-20, -10] },
+        { "Mass": [-30, -40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-30, -20] },
+        { "Mass": [-40, -50] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-40, -30] },
+        { "Mass": [-50, -60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Components",
+        "Phase Alloys",
+        "Proto Light Alloys"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            -50,
+            -40
+          ]
+        },
+        {
+          "Mass": [
+            -60,
+            -70
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Proto Light Alloys",
+        "Proto Radiolic Alloys"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            -60,
+            -50
+          ]
+        },
+        {
+          "Mass": [
+            -70,
+            -80
+          ]
+        }
+      ]
+    }
+  },
+  "long-range-util": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Power Draw": [20, 10] },
+        { "Scan Angle": [-20, -10] },
+        { "Range": [10, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron"
+      ],
+      "effects": [
+        { "Power Draw": [40, 20] },
+        { "Scan Angle": [-30, -15] },
+        { "Range": [20, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron",
+        "Unexpected Emission Data"
+      ],
+      "effects": [
+        { "Power Draw": [60, 30] },
+        { "Scan Angle": [-40, -20] },
+        { "Range": [30, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Decoded Emission Data",
+        "Electrochemical Arrays",
+        "Germanium"
+      ],
+      "effects": [
+        { "Power Draw": [80, 40] },
+        { "Scan Angle": [-50, -25] },
+        { "Range": [40, 80] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Abnormal Compact Emissions Data",
+        "Niobium",
+        "Polymer Capacitors"
+      ],
+      "effects": [
+        { "Power Draw": [100, 50] },
+        { "Scan Angle": [-60, -30] },
+        { "Range": [50, 100] }
+      ]
+    }
+  },
+  "reinforced-util": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Mass": [100, 40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Mass": [150, 80] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Mass": [200, 120] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Molybdenum",
+        "Tungsten",
+        "Zinc"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            80,
+            200
+          ]
+        },
+        {
+          "Mass": [
+            250,
+            160
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "High Density Composites",
+        "Molybdenum",
+        "Technetium"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            100,
+            250
+          ]
+        },
+        {
+          "Mass": [
+            300,
+            200
+          ]
+        }
+      ]
+    }
+  },
+  "shielded-util": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Power Draw": [30, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Power Draw": [60, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Power Draw": [90, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            80,
+            200
+          ]
+        },
+        {
+          "Power Draw": [
+            120,
+            80
+          ]
+        }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Compound Shielding",
+        "Core Dynamics Composites",
+        "Tungsten"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            100,
+            250
+          ]
+        },
+        {
+          "Power Draw": [
+            150,
+            100
+          ]
+        }
+      ]
+    }
+  },
+  "wide-angle-util": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [40, 20] },
+        { "Scan Angle": [20, 40] },
+        { "Scan Time": [20, 10] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [80, 40] },
+        { "Scan Angle": [40, 80] },
+        { "Scan Time": [40, 20] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Classified Scan Databanks",
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [120, 60] },
+        { "Scan Angle": [60, 120] },
+        { "Scan Time": [60, 30] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Divergent Scan Data",
+        "Mechanical Equipment",
+        "Niobium"
+      ],
+      "effects": [
+        { "Mass": [160, 80] },
+        { "Scan Angle": [80, 160] },
+        { "Scan Time": [80, 40] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Classified Scan Fragment",
+        "Mechanical Components",
+        "Tin"
+      ],
+      "effects": [
+        { "Mass": [200, 100] },
+        { "Scan Angle": [100, 200] },
+        { "Scan Time": [100, 50] }
+      ]
+    }
+  },
+  "ammo-capacity-util": {
+    "3": {
+      "ingredients": [
+        "Mechanical Scrap",
+        "Niobium",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Ammo Maximum": [20, 50] },
+        { "Mass": [200, 100] },
+        { "Reload Time": [30, 10] }
+      ]
+    }
+  },
+  "blast-resistant-booster": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Explosive Resistance": [2, 5] },
+        { "Kinetic Resistance": [-2, 0] },
+        { "Thermal Resistance": [-2, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Iron"
+      ],
+      "effects": [
+        { "Explosive Resistance": [7, 10] },
+        { "Kinetic Resistance": [-3, 1] },
+        { "Thermal Resistance": [-3, 1] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Focus Crystals",
+        "Iron"
+      ],
+      "effects": [
+        { "Explosive Resistance": [12, 15] },
+        { "Kinetic Resistance": [-4, 2] },
+        { "Thermal Resistance": [-4, 2] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Germanium",
+        "Refined Focus Crystals",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Explosive Resistance": [17, 20] },
+        { "Kinetic Resistance": [-5, 3] },
+        { "Thermal Resistance": [-5, 3] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Aberrant Shield Pattern Analysis",
+        "Exquisite Focus Crystals",
+        "Niobium"
+      ],
+      "effects": [
+        { "Explosive Resistance": [22, 25] },
+        { "Kinetic Resistance": [-6, -4] },
+        { "Thermal Resistance": [-6, -4] }
+      ]
+    }
+  },
+  "heavy-duty-booster": {
+    "1": {
+      "ingredients": [
+        "Grid Resistors"
+      ],
+      "effects": [
+        { "Integrity": [0, 3] },
+        { "Mass": [100, 50] },
+        { "Power Draw": [5, 0] },
+        { "Shield Boost*": [28, 56] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Hybrid Capacitors"
+      ],
+      "effects": [
+        { "Integrity": [3, 6] },
+        { "Mass": [150, 100] },
+        { "Power Draw": [10, 5] },
+        { "Shield Boost*": [74, 112] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Hybrid Capacitors",
+        "Niobium"
+      ],
+      "effects": [
+        { "Integrity": [6, 9] },
+        { "Mass": [200, 150] },
+        { "Power Draw": [15, 10] },
+        { "Shield Boost*": [121, 168] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Electrochemical Arrays",
+        "Inconsistent Shield Soak Analysis",
+        "Tin"
+      ],
+      "effects": [
+        { "Integrity": [9, 12] },
+        { "Mass": [250, 200] },
+        { "Power Draw": [20, 15] },
+        { "Shield Boost*": [168, 224] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Antimony",
+        "Polymer Capacitors",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Integrity": [12, 15] },
+        { "Mass": [300, 250] },
+        { "Power Draw": [25, 20] },
+        { "Shield Boost*": [214, 280] }
+      ]
+    }
+  },
+  "kinetic-resistant-booster": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-2, 0] },
+        { "Kinetic Resistance": [2, 5] },
+        { "Thermal Resistance": [-2, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Germanium",
+        "Grid Resistors"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-3, -1] },
+        { "Kinetic Resistance": [7, 10] },
+        { "Thermal Resistance": [-3, 1] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Focus Crystals",
+        "Hybrid Capacitors",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-4, 2] },
+        { "Kinetic Resistance": [12, 15] },
+        { "Thermal Resistance": [-4, 2] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Galvanising Alloys",
+        "Refined Focus Crystals",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-5, 3] },
+        { "Kinetic Resistance": [17, 20] },
+        { "Thermal Resistance": [-5, 3] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Aberrant Shield Pattern Analysis",
+        "Exquisite Focus Crystals",
+        "Phase Alloys"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-6, -4] },
+        { "Kinetic Resistance": [22, 25] },
+        { "Thermal Resistance": [-6, -4] }
+      ]
+    }
+  },
+  "resistance-augmented-booster": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Explosive Resistance": [1, 3] },
+        { "Integrity": [-4, 0] },
+        { "Kinetic Resistance": [1, 3] },
+        { "Power Draw": [8, 0] },
+        { "Thermal Resistance": [1, 3] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Explosive Resistance": [2, 6] },
+        { "Integrity": [-8, -2] },
+        { "Kinetic Resistance": [2, 6] },
+        { "Power Draw": [16, 4] },
+        { "Thermal Resistance": [2, 6] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Focus Crystals",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Explosive Resistance": [6, 7] },
+        { "Integrity": [-12, -4] },
+        { "Kinetic Resistance": [6, 7] },
+        { "Power Draw": [24, 8] },
+        { "Thermal Resistance": [6, 7] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Manganese",
+        "Refined Focus Crystals"
+      ],
+      "effects": [
+        { "Explosive Resistance": [7, 11] },
+        { "Integrity": [-16, -6] },
+        { "Kinetic Resistance": [7, 11] },
+        { "Power Draw": [32, 12] },
+        { "Thermal Resistance": [7, 11] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Imperial Shielding",
+        "Refined Focus Crystals"
+      ],
+      "effects": [
+        { "Explosive Resistance": [10, 12] },
+        { "Integrity": [-20, -8] },
+        { "Kinetic Resistance": [10, 12] },
+        { "Power Draw": [40, 16] },
+        { "Thermal Resistance": [10, 12] }
+      ]
+    }
+  },
+  "thermal-resistant-booster": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-2, 0] },
+        { "Kinetic Resistance": [-2, 0] },
+        { "Thermal Resistance": [2, 5] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Germanium",
+        "Heat Conduction Wiring"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-3, 1] },
+        { "Kinetic Resistance": [-3, 1] },
+        { "Thermal Resistance": [7, 10] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Focus Crystals",
+        "Heat Conduction Wiring",
+        "Heat Dispersion Plate"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-4, 2] },
+        { "Kinetic Resistance": [-4, 2] },
+        { "Thermal Resistance": [12, 15] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Heat Dispersion Plate",
+        "Refined Focus Crystals",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-5, 3] },
+        { "Kinetic Resistance": [-5, 3] },
+        { "Thermal Resistance": [17, 20] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Aberrant Shield Pattern Analysis",
+        "Exquisite Focus Crystals",
+        "Heat Exchangers"
+      ],
+      "effects": [
+        { "Explosive Resistance": [-6, -4] },
+        { "Kinetic Resistance": [-6, -4] },
+        { "Thermal Resistance": [22, 25] }
+      ]
+    }
+  },
+  "armoured-plant": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Heat Efficiency": [5, -5] },
+        { "Integrity": [20, 40] },
+        { "Mass": [8, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Heat Efficiency": [6, -6] },
+        { "Integrity": [30, 60] },
+        { "Mass": [16, 4] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Heat Efficiency": [7, -7] },
+        { "Integrity": [40, 80] },
+        { "Mass": [24, 8] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Heat Efficiency": [8, -8] },
+        { "Integrity": [50, 100] },
+        { "Mass": [32, 12] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Compound Shielding",
+        "Core Dynamics Composites",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Heat Efficiency": [9, -9] },
+        { "Integrity": [60, 120] },
+        { "Mass": [40, 16] }
+      ]
+    }
+  },
+  "low-emissions-plant": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Heat Efficiency": [-5, -20] },
+        { "Mass": [5, 0] },
+        { "Power Generation": [-6, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Iron",
+        "Irregular Emission Data"
+      ],
+      "effects": [
+        { "Heat Efficiency": [-10, -30] },
+        { "Mass": [10, 5] },
+        { "Power Generation": [-12, -3] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Heat Exchangers",
+        "Iron",
+        "Irregular Emission Data"
+      ],
+      "effects": [
+        { "Heat Efficiency": [-15, -40] },
+        { "Mass": [15, 10] },
+        { "Power Generation": [-18, -6] }
+      ]
+    }
+  },
+  "overcharged-plant": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Heat Efficiency": [10, 0] },
+        { "Integrity": [-10, 0] },
+        { "Power Generation": [2, 12] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Heat Conduction Wiring"
+      ],
+      "effects": [
+        { "Heat Efficiency": [20, 5] },
+        { "Integrity": [-20, -5] },
+        { "Power Generation": [4, 18] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Heat Conduction Wiring",
+        "Selenium"
+      ],
+      "effects": [
+        { "Heat Efficiency": [30, 10] },
+        { "Integrity": [-30, -10] },
+        { "Power Generation": [6, 24] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Cadmium",
+        "Conductive Ceramics",
+        "Heat Dispersion Plate"
+      ],
+      "effects": [
+        { "Heat Efficiency": [40, 15] },
+        { "Integrity": [-40, -15] },
+        { "Power Generation": [8, 30] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Chemical Manipulators",
+        "Conductive Ceramics",
+        "Tellurium"
+      ],
+      "effects": [
+        { "Heat Efficiency": [50, 20] },
+        { "Integrity": [-50, -20] },
+        { "Power Generation": [10, 36] }
+      ]
+    }
+  },
+  "clean-drives": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Integrity": [-5, 0] },
+        { "Optimised Mass": [-2, 0] },
+        { "Optimal Multiplier": [1, 5] },
+        { "Power Draw": [5, 0] },
+        { "Thermal Load": [-6, -20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Integrity": [-10, -4] },
+        { "Optimised Mass": [-5, -1] },
+        { "Optimal Multiplier": [3, 9] },
+        { "Power Draw": [10, 3] },
+        { "Thermal Load": [-10, -30] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Specialised Legacy Firmware",
+        "Unexpected Emission Data"
+      ],
+      "effects": [
+        { "Integrity": [-15, -8] },
+        { "Optimised Mass": [-6, -2] },
+        { "Optimal Multiplier": [5, 12] },
+        { "Power Draw": [14, 8] },
+        { "Thermal Load": [-15, -40] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Decoded Emission Data",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        { "Integrity": [-20, -12] },
+        { "Optimised Mass": [-8, -4] },
+        { "Optimal Multiplier": [8, 14] },
+        { "Power Draw": [20, 10] },
+        { "Thermal Load": [-20, -50] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Abnormal Compact Emission Data",
+        "Conductive Ceramics",
+        "Tin"
+      ],
+      "effects": [
+        { "Integrity": [-25, -16] },
+        { "Optimised Mass": [-10, -5] },
+        { "Optimal Multiplier": [10, 18] },
+        { "Power Draw": [25, 16] },
+        { "Thermal Load": [-25, -60] }
+      ]
+    }
+  },
+  "dirty-drives": {
+    "1": {
+      "ingredients": [
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Integrity": [-6, 0] },
+        { "Optimised Mass": [-4, 0] },
+        { "Optimal Multiplier": [4, 10] },
+        { "Power Draw": [4, 0] },
+        { "Thermal Load": [20, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Mechanical Equipment",
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Integrity": [-12, 1] },
+        { "Optimised Mass": [-6, -1] },
+        { "Optimal Multiplier": [10, 14] },
+        { "Power Draw": [8, 2] },
+        { "Thermal Load": [40, 10] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chromium",
+        "Conductive Components",
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Integrity": [-18, 4] },
+        { "Optimised Mass": [-10, -2] },
+        { "Optimal Multiplier": [14, 20] },
+        { "Power Draw": [11, 3] },
+        { "Thermal Load": [60, 20] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Configurable Components",
+        "Modified Consumer Firmware",
+        "Selenium"
+      ],
+      "effects": [
+        { "Integrity": [-24, 5] },
+        { "Optimised Mass": [-12, -4] },
+        { "Optimal Multiplier": [20, 25] },
+        { "Power Draw": [15, 5] },
+        { "Thermal Load": [80, 30] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Cadmium",
+        "Cracked Industrial Firmware",
+        "Pharmaceutical Isolators"
+      ],
+      "effects": [
+        { "Integrity": [-30, 8] },
+        { "Optimised Mass": [-16, -5] },
+        { "Optimal Multiplier": [25, 30] },
+        { "Power Draw": [20, 8] },
+        { "Thermal Load": [100, 40] }
+      ]
+    }
+  },
+  "reinforced-drives": {},
+  "faster-boot-sequence-fsd": {},
+  "increased-range-fsd": {},
+  "shielded-fsd": {}
+}
