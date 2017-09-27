@@ -8,16 +8,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 /**
  * Created by Connor Boyle on 23-Sep-17.
+ *
+ * AsyncTask to get a list of grades available to apply a given modification
+ * A few modifications have only a grade 3 option, so returning a count will give unwanted results
  */
 
-public class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
-    BlueprintsActivity caller;
+class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
+    private BlueprintsActivity caller;
 
     GetGradesTask(BlueprintsActivity caller) {
         this.caller = caller;
@@ -25,7 +27,7 @@ public class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
 
     @Override
     protected ArrayList<String> doInBackground(String... params) {
-        return getGradesList(params[0], params[1], params[2]);
+        return getGradesList(params[0]);
     }
 
     @Override
@@ -33,44 +35,26 @@ public class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
         caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.GRADES, strings);
     }
 
-    private ArrayList<String> getGradesList(String module, String modification, String url) {
+    private ArrayList<String> getGradesList(String modID) {
         ArrayList<String> gradesList = new ArrayList<>();
         try {
-            InputStream is = new URL(url).openStream();
+            InputStream is = caller.getContext().getAssets().open("blueprints_detail.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
             jr.beginObject();
-            // loop until reader arrives at given module name
-            while (jr.hasNext() && !module.equals(jr.nextName())) {
-                jr.skipValue();
-            }
 
-            jr.beginObject();
-            if (jr.nextName().equals("Module"))
-                jr.skipValue(); // "Module" key will be removed in future
-            if (jr.nextName().equals("Engineers"))
-                jr.skipValue();
-            if (jr.nextName().equals("Experimental"))
-                jr.skipValue();
-
-            if (jr.nextName().equals("Blueprints")) {
-                jr.beginArray();
-                while (jr.hasNext()) {
+            while (jr.hasNext()) {
+                if (jr.nextName().equals(modID)) {
                     jr.beginObject();
-                    if (jr.nextName().equals("name") && jr.nextString().equals(modification)) {
-                        while (jr.hasNext()) {
-                            gradesList.add(jr.nextName());
-                            jr.skipValue();
-                        }
-                    } else {
-                        while (jr.hasNext()) {
-                            jr.skipValue();
-                        }
+                    while (jr.hasNext()) {
+                        gradesList.add(jr.nextName());
+                        jr.skipValue();
                     }
                     jr.endObject();
+                } else {
+                    jr.skipValue();
                 }
-                jr.endArray();
             }
 
             jr.endObject();

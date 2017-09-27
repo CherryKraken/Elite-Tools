@@ -1,7 +1,6 @@
 package com.connorboyle.elitetools;
 
 import android.os.AsyncTask;
-import android.widget.AdapterView;
 
 import com.google.gson.stream.JsonReader;
 
@@ -9,12 +8,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 /**
  * Created by Connor Boyle on 22-Sep-17.
+ *
+ * AsyncTask to get a list of all engineer modifications for a given module
  */
 
 class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
@@ -26,7 +26,7 @@ class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
 
     @Override
     protected ArrayList<String> doInBackground(String... params) {
-        return getModsList(params[0], params[1]);
+        return getModsList(params[0]);
     }
 
     @Override
@@ -34,10 +34,10 @@ class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
         caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.MODIFICATIONS, strings);
     }
 
-    private ArrayList<String> getModsList(String module, String url) {
+    private ArrayList<String> getModsList(String module) {
         ArrayList<String> modsList = new ArrayList<>();
         try {
-            InputStream is = new URL(url).openStream();
+            InputStream is = caller.getContext().getAssets().open("modules_index.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
@@ -48,24 +48,16 @@ class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
             }
 
             jr.beginObject();
-            if (jr.nextName().equals("Module"))
-                jr.skipValue(); // "Module" key will be removed in future
-            if (jr.nextName().equals("Engineers"))
-                jr.skipValue();
-            if (jr.nextName().equals("Experimental"))
-                jr.skipValue();
-
-            if (jr.nextName().equals("Blueprints")) {
-                jr.beginArray();
-                while (jr.hasNext()) {
-                    jr.beginObject();
-                    if (jr.nextName().equals("name"))
+            while (jr.hasNext()) {
+                if (jr.nextName().equals("Blueprints")) {
+                    jr.beginArray();
+                    while (jr.hasNext()) {
                         modsList.add(jr.nextString());
-                    while(jr.hasNext())
-                        jr.skipValue();
-                    jr.endObject();
+                    }
+                    jr.endArray();
+                } else {
+                    jr.skipValue();
                 }
-                jr.endArray();
             }
 
             jr.endObject();

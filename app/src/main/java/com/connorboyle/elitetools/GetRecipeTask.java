@@ -8,15 +8,17 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.nio.charset.Charset;
 
 /**
  * Created by Connor Boyle on 23-Sep-17.
+ *
+ * AsyncTask to get the blueprint recipe for the given module, modification, and grade.
+ * Recipe includes the ingredients, and the effects and their range of possible values.
+ * Does not include secondary or experimental effects.
  */
 
-public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
+class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
     private BlueprintsActivity caller;
 
     GetRecipeTask(BlueprintsActivity caller) {
@@ -33,91 +35,54 @@ public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
         caller.onRecipeTaskCompleted(recipe);
     }
 
-    private Recipe getRecipe(String module, String modification, String grade, String url) {
+    private Recipe getRecipe(String module, String type, String modification, String grade) {
         Recipe recipe = new Recipe(module, modification, grade);
+        String modID = (modification +"-"+ type).toLowerCase().replace(' ', '-');
         try {
-            InputStream is = new URL(url).openStream();
+            InputStream is = caller.getContext().getAssets().open("blueprints_detail.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
             jr.beginObject();
-            // loop until reader arrives at given module name
-            while (jr.hasNext() && !module.equals(jr.nextName())) {
-                jr.skipValue();
-            }
-
-            jr.beginObject();
-            if (jr.nextName().equals("Module"))
-                jr.skipValue(); // "Module" key will be removed in future
-
-            if (jr.nextName().equals("Engineers")) {
-                jr.beginArray();
-                while (jr.hasNext()) {
+            // loop until reader arrives at given modification name
+            while (jr.hasNext()) {
+                if (jr.nextName().equals(modID)) {
                     jr.beginObject();
-                    jr.nextName(); // == "id"
-                    jr.skipValue(); // skip "id"
-                    jr.nextName(); // == "name"
-                    String e = jr.nextString();
-                    jr.nextName(); // == "grade"
-                    String g = jr.nextString();
-                    recipe.addEngineer(e, g);
-                    jr.endObject();
-                }
-                jr.endArray();
-            }
-
-            if (jr.nextName().equals("Experimental")) {
-                jr.beginArray();
-                while (jr.hasNext())
-                    recipe.addExperimental(jr.nextString());
-                jr.endArray();
-            }
-
-            if (jr.nextName().equals("Blueprints")) {
-                jr.beginArray();
-                while (jr.hasNext()) {
-                    jr.beginObject();
-                    if (jr.nextName().equals("name") && jr.nextString().equals(modification)) {
-                        while (jr.hasNext()) {
-                            if (jr.nextName().equals(grade)) {
-                                jr.beginObject();
-
-                                jr.nextName(); // == "ingredients"
+                    while (jr.hasNext()) {
+                        if (jr.nextName().equals(grade)) {
+                            jr.beginObject();
+                            // Add ingredients to recipe
+                            if (jr.nextName().equals("ingredients")) {
                                 jr.beginArray();
                                 while (jr.hasNext()) {
                                     recipe.addIngredient(jr.nextString());
                                 }
                                 jr.endArray();
-
-                                jr.nextName(); // == "effects"
+                            }
+                            // Add effects to recipe
+                            if (jr.nextName().equals("effects")) {
                                 jr.beginArray();
                                 while (jr.hasNext()) {
-                                    String s;
-                                    double min, max;
                                     jr.beginObject();
-                                    s = jr.nextName();
+                                    String name = jr.nextName();
                                     jr.beginArray();
-                                    min = jr.nextDouble();
-                                    max = jr.nextDouble();
+                                    double min = jr.nextDouble();
+                                    double max = jr.nextDouble();
                                     jr.endArray();
                                     jr.endObject();
-                                    recipe.addEffect(s, min, max);
+                                    recipe.addEffect(name, min, max);
                                 }
                                 jr.endArray();
-
-                                jr.endObject();
-                            } else {
-                                jr.skipValue();
                             }
-                        }
-                    } else {
-                        while (jr.hasNext()) {
+                            jr.endObject();
+                        } else {
                             jr.skipValue();
                         }
                     }
                     jr.endObject();
+                } else {
+                    jr.skipValue();
                 }
-                jr.endArray();
             }
 
             jr.endObject();
