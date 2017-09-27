@@ -9,7 +9,7 @@
     </style>
 
     <style name="EliteTheme" parent="Theme.AppCompat.NoActionBar" >
-        <item name="colorAccent">#FF7100</item>
+        <item name="colorAccent">#ff8800</item>
     </style>
 
 </resources>
