@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tvRowEffectName"
+        android:layout_margin="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="TextView"
+        android:textSize="16sp"
+        tools:text="Thermal Load" />
+
+    <TextView
+        android:id="@+id/tvRowEffectMin"
+        android:layout_margin="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        tools:text="Min" />
+
+    <TextView
+        android:id="@+id/tvRowEffectMax"
+        android:layout_margin="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        tools:text="Max" />
+</LinearLayout>
