@@ -14,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,14 +23,10 @@ import java.util.ArrayList;
  */
 
 public class BlueprintsActivity extends Fragment {
-    private static final String SYSTEMS_JSON_URL = "https://drive.google.com/uc?export=view&id=0B3a2T7y-8CHwZmNLWU52WUF3VXM";
-    private static final String MODULES_JSON_URL = "https://drive.google.com/uc?export=view&id=0B3a2T7y-8CHwdFFyNnQzRm9lMm8";
-    private static final String ENGINEERS_JSON_URL = "https://drive.google.com/uc?export=view&id=0B3a2T7y-8CHwR3ZrZFpLd2VGTzQ";
-    private static final String INGREDIENTS_JSON_URL = "https://drive.google.com/uc?export=view&id=0B3a2T7y-8CHwNWhuUzlNaGNPUk0";
 
-    enum JSONTask { MODULES, MODIFICATIONS, GRADES }
+    enum JSONTask { MODULES, MODIFICATIONS, GRADES, RECIPE }
 
-    private ArrayList<String> moduleList, modsList;
+    private ArrayList<String> moduleList, modsList, typeList;
 
     private View v;
 
@@ -39,7 +36,7 @@ public class BlueprintsActivity extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.blueprint_layout, container, false);
-        new GetModulesTask(this).execute(MODULES_JSON_URL);
+        new GetModulesTask(this).execute();
         setupControls();
         return v;
     }
@@ -47,20 +44,32 @@ public class BlueprintsActivity extends Fragment {
     void onBackgroundTaskCompleted(JSONTask taskCompleted, ArrayList<String> strings) {
         switch (taskCompleted) {
             case MODULES:
-                moduleList = strings;
-                moduleList.add(0,"Select a ship module");
+                moduleList = new ArrayList<>();
+                typeList = new ArrayList<>();
+                int i = 0;
+                try {
+                    while (i < strings.size()) {
+                        moduleList.add(strings.get(i++));
+                        typeList.add(strings.get(i++));
+                    }
+                } catch (IndexOutOfBoundsException e) {
+                    e.printStackTrace();
+                }
+                moduleList.add(0,"Select a ship module...");
                 selModules.setAdapter(new ArrayAdapter<>(
                         getContext(), android.R.layout.simple_list_item_1, moduleList));
                 break;
             case MODIFICATIONS:
                 modsList = strings;
-                modsList.add(0, "Select a modification");
+                modsList.add(0, "Select a modification...");
                 selModifications.setAdapter(new ArrayAdapter<>(
                         getContext(), android.R.layout.simple_list_item_1, modsList));
                 break;
             case GRADES:
-                for (int i = 0; i < strings.size(); i++) {
-                    rbArray[i].setEnabled(true);
+                disableRadioButtons();
+                rbGrades.setEnabled(true);
+                for (String s : strings) {
+                    rbArray[Integer.valueOf(s) - 1].setEnabled(true);
                 }
                 break;
         }
@@ -92,7 +101,7 @@ public class BlueprintsActivity extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position != 0) {
                     String module = moduleList.get(position);
-                    new GetModificationsTask(getThisClass()).execute(module, MODULES_JSON_URL);
+                    new GetModificationsTask(getThisClass()).execute(module);
                 } else {
                     selModifications.setAdapter(null);
                     disableRadioButtons();
@@ -108,8 +117,11 @@ public class BlueprintsActivity extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position != 0) {
                     String module = selModules.getSelectedItem().toString();
+                    String type = typeList.get(moduleList.indexOf(module) - 1); // remember the default selection
                     String modification = modsList.get(position);
-                    new GetGradesTask(getThisClass()).execute(module, modification, MODULES_JSON_URL);
+                    String result = (modification +"-"+ type).toLowerCase().replace(' ', '-');
+                    Toast.makeText(getContext(), result, Toast.LENGTH_SHORT).show();
+                    new GetGradesTask(getThisClass()).execute(result);
                 } else {
                     disableRadioButtons();
                 }
@@ -122,17 +134,23 @@ public class BlueprintsActivity extends Fragment {
         rbGrades.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                RadioButton rb = (RadioButton) group.findViewById(checkedId);
-                String grade = rb.getText().toString();
-                String module = selModules.getSelectedItem().toString();
-                String modification = selModifications.getSelectedItem().toString();
-                new GetRecipeTask((getThisClass())).execute(module, modification, grade, MODULES_JSON_URL);
+                if (group.isEnabled()) {
+                    RadioButton rb = (RadioButton) group.findViewById(checkedId);
+                    String grade = rb.getText().toString();
+                    String module = selModules.getSelectedItem().toString();
+                    String type = typeList.get(moduleList.indexOf(module) - 1);
+                    String modification = selModifications.getSelectedItem().toString();
+                    new GetRecipeTask((getThisClass())).execute(module, type, modification, grade);
+                    ((RadioButton) v.findViewById(checkedId)).setChecked(false);
+                }
             }
         });
     }
 
     private void disableRadioButtons() {
         for (RadioButton rb : rbArray) {
+            rb.setSelected(false);
+            rb.setChecked(false);
             rb.setEnabled(false);
         }
     }

@@ -27,13 +27,15 @@ class Recipe implements Serializable {
     }
 
     void addIngredient(String s) { ingredients.add(s); }
+
     void addExperimental(String s) { experimentals.add(s); }
+
     void addEngineer(String e, String g) {
         if (Integer.valueOf(g) >= Integer.valueOf(this.grade)) { // Ignore engineers that can't perform modification
             engineers.put(e, g);
         }
     }
-    void addEffect(String s, double min, double max) {
-        effects.put(s, new double[] { min, max });
+    void addEffect(String effect, double min, double max) {
+        effects.put(effect, new double[] { min, max });
     }
 }
