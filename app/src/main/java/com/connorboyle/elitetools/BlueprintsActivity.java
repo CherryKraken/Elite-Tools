@@ -120,7 +120,6 @@ public class BlueprintsActivity extends Fragment {
                     String type = typeList.get(moduleList.indexOf(module) - 1); // remember the default selection
                     String modification = modsList.get(position);
                     String result = (modification +"-"+ type).toLowerCase().replace(' ', '-');
-                    Toast.makeText(getContext(), result, Toast.LENGTH_SHORT).show();
                     new GetGradesTask(getThisClass()).execute(result);
                 } else {
                     disableRadioButtons();
