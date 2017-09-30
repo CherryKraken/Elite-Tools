@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.adapters;
 
 import android.widget.BaseAdapter;
 

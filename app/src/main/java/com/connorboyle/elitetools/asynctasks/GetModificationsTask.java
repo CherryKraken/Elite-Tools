@@ -1,7 +1,8 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
 
+import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;
@@ -17,10 +18,10 @@ import java.util.ArrayList;
  * AsyncTask to get a list of all engineer modifications for a given module
  */
 
-class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
+public class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
     private final BlueprintsActivity caller;
 
-    GetModificationsTask(BlueprintsActivity caller) {
+    public GetModificationsTask(BlueprintsActivity caller) {
         this.caller = caller;
     }
 

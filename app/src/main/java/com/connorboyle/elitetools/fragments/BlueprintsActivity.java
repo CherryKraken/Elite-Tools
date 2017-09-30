@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.fragments;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
@@ -10,11 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.asynctasks.GetEngineersForGradeTask;
+import com.connorboyle.elitetools.asynctasks.GetGradesTask;
+import com.connorboyle.elitetools.asynctasks.GetModificationsTask;
+import com.connorboyle.elitetools.asynctasks.GetModulesTask;
+import com.connorboyle.elitetools.asynctasks.GetRecipeTask;
+import com.connorboyle.elitetools.classes.Recipe;
 
 import java.util.ArrayList;
 
@@ -24,7 +30,7 @@ import java.util.ArrayList;
 
 public class BlueprintsActivity extends Fragment {
 
-    enum JSONTask { MODULES, MODIFICATIONS, GRADES, RECIPE }
+    public enum JSONTask { MODULES, MODIFICATIONS, GRADES, RECIPE }
 
     private ArrayList<String> moduleList, modsList, typeList;
 
@@ -41,7 +47,7 @@ public class BlueprintsActivity extends Fragment {
         return v;
     }
 
-    void onBackgroundTaskCompleted(JSONTask taskCompleted, ArrayList<String> strings) {
+    public void onBackgroundTaskCompleted(JSONTask taskCompleted, ArrayList<String> strings) {
         switch (taskCompleted) {
             case MODULES:
                 moduleList = new ArrayList<>();
@@ -75,12 +81,16 @@ public class BlueprintsActivity extends Fragment {
         }
     }
 
-    void onRecipeTaskCompleted(Recipe recipe) {
-        Bundle b = new Bundle();
-        b.putSerializable("recipe", recipe);
-        DialogFragment dialog = new RecipeDialog();
-        dialog.setArguments(b);
-        dialog.show(getActivity().getFragmentManager(), "recipe");
+    public void onRecipeTaskCompleted(Recipe recipe) {
+        if (recipe.engineers.isEmpty()) {
+            new GetEngineersForGradeTask(this).execute(recipe);
+        } else {
+            Bundle b = new Bundle();
+            b.putSerializable("recipe", recipe);
+            DialogFragment dialog = new RecipeDialog();
+            dialog.setArguments(b);
+            dialog.show(getActivity().getFragmentManager(), "recipe");
+        }
     }
 
     private void setupControls() {

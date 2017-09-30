@@ -1,7 +1,9 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
 
+import com.connorboyle.elitetools.fragments.BlueprintsActivity;
+import com.connorboyle.elitetools.classes.Recipe;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;
@@ -18,10 +20,10 @@ import java.nio.charset.Charset;
  * Does not include secondary or experimental effects.
  */
 
-class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
+public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
     private BlueprintsActivity caller;
 
-    GetRecipeTask(BlueprintsActivity caller) {
+    public GetRecipeTask(BlueprintsActivity caller) {
         this.caller = caller;
     }
 

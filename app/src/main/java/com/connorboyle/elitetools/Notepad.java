@@ -1,6 +1,5 @@
 package com.connorboyle.elitetools;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,20 +11,14 @@ import android.text.Selection;
 import android.text.Spannable;
 import android.text.TextWatcher;
 import android.text.method.ArrowKeyMovementMethod;
-import android.text.method.LinkMovementMethod;
-import android.text.method.MovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.util.Linkify;
-import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static android.view.MotionEvent.ACTION_DOWN;
-import static android.view.MotionEvent.ACTION_UP;
+import com.connorboyle.elitetools.classes.NoteEntry;
 
 /**
  * Created by Connor Boyle on 2017-06-18.

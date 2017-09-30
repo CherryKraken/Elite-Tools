@@ -1,7 +1,9 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
 
+import com.connorboyle.elitetools.fragments.BlueprintsActivity;
+import com.connorboyle.elitetools.classes.Recipe;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;

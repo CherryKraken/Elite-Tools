@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.classes;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.connorboyle.elitetools.classes.NoteEntry;
 
 /**
  * Created by Connor Boyle on 2017-06-16.
@@ -16,15 +18,15 @@ public class NoteDBHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAME = "notes";
     private static final int DB_VERSION = 1;
     private static final String ID = "_id";
-    public static final String TITLE = "title";
-    public static final String TEXT = "text";
-    public static final String MODIFIED = "modified";
+    private static final String TITLE = "title";
+    private static final String TEXT = "text";
+    private static final String MODIFIED = "modified";
 
     private SQLiteDatabase sqlDB;
 
     public NoteDBHelper(Context context) { super(context, DB_NAME, null, DB_VERSION); }
 
-    void open() throws SQLException { sqlDB = getWritableDatabase(); }
+    public void open() throws SQLException { sqlDB = getWritableDatabase(); }
 
     public void close() { sqlDB.close(); }
 

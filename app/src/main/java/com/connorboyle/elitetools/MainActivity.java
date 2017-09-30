@@ -15,6 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.connorboyle.elitetools.fragments.BearingCalculator;
+import com.connorboyle.elitetools.fragments.BlueprintsActivity;
+import com.connorboyle.elitetools.fragments.EngineersActivity;
+import com.connorboyle.elitetools.fragments.HabZoneCalculator;
+import com.connorboyle.elitetools.fragments.MaterialsFinderActivity;
+import com.connorboyle.elitetools.fragments.Notebook;
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
     private Toolbar toolbar;

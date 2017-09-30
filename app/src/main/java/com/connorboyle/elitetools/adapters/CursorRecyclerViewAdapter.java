@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;/*
+package com.connorboyle.elitetools.adapters;/*
 
  * Copyright (C) 2014 skyfish.jy@gmail.com
  *

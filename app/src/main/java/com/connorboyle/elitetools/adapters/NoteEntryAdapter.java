@@ -1,9 +1,7 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DataSetObservable;
-import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +12,11 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.connorboyle.elitetools.fragments.Notebook;
+import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.classes.NoteDBHelper;
+import com.connorboyle.elitetools.classes.NoteEntry;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +36,7 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
     private ArrayList<NoteEntry> notesToRemove;
     private final Notebook.OnItemTouchListener onItemTouchListener;
 
-    NoteEntryAdapter(Context context, Cursor cursor, Notebook.OnItemTouchListener onItemTouchListener) {
+    public NoteEntryAdapter(Context context, Cursor cursor, Notebook.OnItemTouchListener onItemTouchListener) {
         super(context, cursor); // for CursorRecyclerViewAdapter
         this.context = context;
         this.onItemTouchListener = onItemTouchListener;
@@ -110,7 +113,7 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
 //        db.close();
     }
 
-    void pendingRemoval(final int pos) {
+    public void pendingRemoval(final int pos) {
         getCursor().moveToPosition(pos);
         final NoteEntry note = new NoteEntry(
                 getCursor().getLong(0), getCursor().getString(1), getCursor().getString(2), 0);
@@ -130,7 +133,7 @@ public class NoteEntryAdapter extends CursorRecyclerViewAdapter<NoteEntryAdapter
         }
     }
 
-    boolean isPendingRemoval(int position) {
+    public boolean isPendingRemoval(int position) {
         getCursor().moveToPosition(position);
         final NoteEntry note = new NoteEntry(
                 getCursor().getLong(0), getCursor().getString(1), getCursor().getString(2), 0);

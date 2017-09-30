@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.connorboyle.elitetools.R;
 
 /**
  * Created by Connor Boyle on 09-Sep-17.

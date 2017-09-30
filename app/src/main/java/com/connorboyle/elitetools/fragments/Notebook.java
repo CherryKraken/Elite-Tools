@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.fragments;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -18,7 +18,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.connorboyle.elitetools.Notepad;
+import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.adapters.NoteEntryAdapter;
+import com.connorboyle.elitetools.classes.NoteDBHelper;
+import com.connorboyle.elitetools.classes.NoteEntry;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -28,7 +33,7 @@ import static android.app.Activity.RESULT_OK;
 
 public class Notebook extends Fragment implements View.OnClickListener {
 
-    interface OnItemTouchListener {
+    public interface OnItemTouchListener {
         void onNoteEntryClick(Cursor c);
     }
 

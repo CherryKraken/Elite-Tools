@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.classes;
 
 import java.io.Serializable;
 
@@ -8,18 +8,18 @@ import java.io.Serializable;
 
 public class NoteEntry implements Serializable{
     long id;
-    String title;
-    String text;
+    public String title;
+    public String text;
     public long modified;
 
-    NoteEntry(long id, String title, String text, long modified) {
+    public NoteEntry(long id, String title, String text, long modified) {
         this.id = id;
         this.title = title;
         this.text = text;
         this.modified = modified;
     }
 
-    NoteEntry(String title, String text, long modified) {
+    public NoteEntry(String title, String text, long modified) {
         this(-1, title, text, modified);
     }
 

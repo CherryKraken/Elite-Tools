@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.fragments;
 
 import android.support.v4.app.Fragment;
 

@@ -1,7 +1,8 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
 
+import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;
@@ -18,10 +19,10 @@ import java.util.ArrayList;
  * A few modifications have only a grade 3 option, so returning a count will give unwanted results
  */
 
-class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
-    private BlueprintsActivity caller;
+public class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
+    private final BlueprintsActivity caller;
 
-    GetGradesTask(BlueprintsActivity caller) {
+    public GetGradesTask(BlueprintsActivity caller) {
         this.caller = caller;
     }
 

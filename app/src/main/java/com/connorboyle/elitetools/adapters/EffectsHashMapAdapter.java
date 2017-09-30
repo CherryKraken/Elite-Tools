@@ -1,21 +1,21 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.adapters;
 
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.HashMap;
+import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.adapters.HashMapAdapter;
 
-import static android.R.attr.max;
+import java.util.HashMap;
 
 /**
  * Created by Connor Boyle on 27-Sep-17.
  */
 
-class EffectsHashMapAdapter extends HashMapAdapter {
+public class EffectsHashMapAdapter extends HashMapAdapter {
     public EffectsHashMapAdapter(HashMap map) {
         super(map);
     }

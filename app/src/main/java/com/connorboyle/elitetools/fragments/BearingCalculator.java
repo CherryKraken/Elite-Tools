@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools;
+package com.connorboyle.elitetools.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.classes.LatLng;
+import com.connorboyle.elitetools.classes.POIPreset;
+
 import java.util.ArrayList;
 
 /**
@@ -27,18 +31,18 @@ public class BearingCalculator extends Fragment implements TextWatcher, Spinner.
     TextView tvIBearing, tvFBearing;
     Spinner spinner;
 
-    ArrayList<CoordPreset> presets;
+    ArrayList<POIPreset> presets;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         presets = new ArrayList<>();
-        presets.add(new CoordPreset("Custom\n", null));
-        presets.add(new CoordPreset("Pleiades Sector AB-W B2-4 - 9 A\nAlien Crash Site 1\n", new LatLng(-26.37, 97.7)));
-        presets.add(new CoordPreset("HIP 17862 - 6 C A\nAlien Crash Site 2\n", new LatLng(30.32, -98.58)));
-        presets.add(new CoordPreset("HIP 17403 - A 4 A\nAlien Crash Site 3\n", new LatLng(-34.98, -141.41)));
-        presets.add(new CoordPreset("Synuefe XR-H d11-102 - 1 B\nAncient Ruins 1\n", new LatLng(-31.806, -128.937)));
+        presets.add(new POIPreset("Custom\n", null));
+        presets.add(new POIPreset("Pleiades Sector AB-W B2-4 - 9 A\nAlien Crash Site 1\n", new LatLng(-26.37, 97.7)));
+        presets.add(new POIPreset("HIP 17862 - 6 C A\nAlien Crash Site 2\n", new LatLng(30.32, -98.58)));
+        presets.add(new POIPreset("HIP 17403 - A 4 A\nAlien Crash Site 3\n", new LatLng(-34.98, -141.41)));
+        presets.add(new POIPreset("Synuefe XR-H d11-102 - 1 B\nAncient Ruins 1\n", new LatLng(-31.806, -128.937)));
 
         v = inflater.inflate(R.layout.bearing_calc_layout, container, false);
         setupControls();
@@ -126,7 +130,7 @@ public class BearingCalculator extends Fragment implements TextWatcher, Spinner.
             numDestLat.setEnabled(true);
             numDestLng.setEnabled(true);
         } else {
-            CoordPreset sel = presets.get(position);
+            POIPreset sel = presets.get(position);
             numDestLat.setText(sel.latLng.latitude + "");
             numDestLng.setText(sel.latLng.longitude + "");
             numDestLat.setEnabled(false);
