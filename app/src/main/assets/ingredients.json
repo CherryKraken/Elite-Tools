@@ -1,0 +1,836 @@
+{
+  "Aberrant Shield Pattern Analysis": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Abnormal Compact Emissions Data": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Adaptive Encryptors Capture": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Anomalous Bulk Scan Data": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Anomalous FSD Telemetry": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Antimony": {
+    "grade": "5",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "C 6",
+        "ratio": 0.8
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 1.5
+      }
+    ]
+  },
+  "Arsenic": {
+    "grade": "3",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 3",
+        "ratio": 2.2
+      },
+      {
+        "system": "Mildanji",
+        "body": "B 2",
+        "ratio": 2.2
+      },
+      {
+        "system": "Delkar",
+        "body": "9 B",
+        "ratio": 2.1
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.6
+      }
+    ]
+  },
+  "Atypical Disrupted Wake Echoes": {
+    "grade": "1",
+    "type": "Data",
+    "find": [
+      "High wake scanning",
+      "Mission reward"
+    ]
+  },
+  "Atypical Encryption Archives": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Basic Conductors": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Biotech Conductors": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Cadmium": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "C 2",
+        "ratio": 1.6
+      },
+      {
+        "system": "Delkar",
+        "body": "7 A",
+        "ratio": 1.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.7
+      }
+    ]
+  },
+  "Carbon": {
+    "grade": "1",
+    "type": "Raw material"
+  },
+  "Chemical Distillery": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Chemical Manipulators": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Chemical Processors": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Chemical Storage Units": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Chromium": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "C 3",
+        "ratio": 10.1
+      },
+      {
+        "system": "Delkar",
+        "body": "2",
+        "ratio": 10.2
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 15.9
+      }
+    ]
+  },
+  "Classified Scan Databanks": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Classified Scan Fragment": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Compact Composites": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Compound Shielding": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Conductive Ceramics": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Conductive Components": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Conductive Polymers": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Configurable Components": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Core Dynamics Composites": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Cracked Industrial Components": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Crystal Shards": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Datamined Wake Exceptions": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Decoded Emission Data": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Distorted Shield Cycle Recordings": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Divergent Scan Data": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Eccentric Hyperspace Trajectories": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Electrochemical Arrays": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Exceptional Scrambled Emission Data": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Exquisite Focus Crystals": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Filament Composites": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Flawed Focus Crystals": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Focus Crystals": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Galvanising Alloys": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Germanium": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 2",
+        "ratio": 5.0
+      },
+      {
+        "system": "Delkar",
+        "body": "5 A",
+        "ratio": 5.9
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 5.8
+      }
+    ]
+  },
+  "Grid Resistors": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Heat Conduction Wiring": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Heat Dispersion Plate": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Heat Exchangers": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Heat Resistant Ceramics": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Heat Vanes": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "High Density Composites": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Hybrid Capacitors": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Imperial Shielding": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Improvised Components": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Inconsistent Shield Soak Analysis": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Iron": {
+    "grade": "1",
+    "type": "Raw material"
+  },
+  "Irregular Emission Data": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Manganese": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 5",
+        "ratio": 9.2
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 14.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 16.5
+      }
+    ]
+  },
+  "Mechanical Components": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Mechanical Equipment": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Mechanical Scrap": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Mercury": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 2",
+        "ratio": 1.0
+      },
+      {
+        "system": "Mildanji",
+        "body": "A 3",
+        "ratio": 1.0
+      },
+      {
+        "system": "Delkar",
+        "body": "2",
+        "ratio": 1.0
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 1.0
+      }
+    ]
+  },
+  "Military Grade Alloys": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Military Supercapacitors": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Modified Consumer Firmware": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Modified Embedded Firmware": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Molybdenum": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 1",
+        "ratio": 1.5
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 2.3
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.6
+      }
+    ]
+  },
+  "Nickel": {
+    "grade": "1",
+    "type": "Raw material"
+  },
+  "Niobium": {
+    "grade": "3",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 1",
+        "ratio": 1.5
+      },
+      {
+        "system": "Delkar",
+        "body": "7 B",
+        "ratio": 1.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.7
+      }
+    ]
+  },
+  "Open Symmetric Keys": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Pattern Alpha Obelisk Data": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Pattern Beta Obelisk Data": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Pattern Delta Obelisk Data": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Pattern Epsilon Obelisk Data": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Pattern Gamma Obelisk Data": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Peculiar Shield Frequency Data": {
+    "grade": "5",
+    "type": "Data"
+  },
+  "Pharmaceutical Isolators": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Phase Alloys": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Phosphorus": {
+    "grade": "1",
+    "type": "Raw material"
+  },
+  "Polonium": {
+    "grade": "5",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Delkar",
+        "body": "5 A",
+        "ratio": 0.5
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 0.5
+      }
+    ]
+  },
+  "Polymer Capacitors": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Precipitated Alloys": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Proprietary Composites": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Proto Heat Radiators": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Proto Light Alloys": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Proto Radiolic Alloys": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Refined Focus Crystals": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Ruthenium": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 1",
+        "ratio": 1.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 1.4
+      }
+    ]
+  },
+  "Salvaged Alloys": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Security Firmware Patch": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Selenium": {
+    "grade": "3",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "C 6",
+        "ratio": 3.6
+      },
+      {
+        "system": "Delkar",
+        "body": "9 A",
+        "ratio": 4.2
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 4.3
+      }
+    ]
+  },
+  "Shield Emitters": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Shielding Sensors": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Specialised Legacy Firmware": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Strange Wake Solutions": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Sulphur": {
+    "grade": "1",
+    "type": "Raw material"
+  },
+  "Tagged Encryption Codes": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Technetium": {
+    "grade": "5",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 5",
+        "ratio": 0.8
+      },
+      {
+        "system": "Delkar",
+        "body": "2",
+        "ratio": 0.8
+      },
+      {
+        "system": "Delkar",
+        "body": "3",
+        "ratio": 0.8
+      }
+    ]
+  },
+  "Tellurium": {
+    "grade": "5",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 4",
+        "ratio": 1.1
+      },
+      {
+        "system": "Mildanji",
+        "body": "C 2",
+        "ratio": 1.1
+      },
+      {
+        "system": "Delkar",
+        "body": "Anamundi",
+        "ratio": 1.3
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 1.4
+      }
+    ]
+  },
+  "Tempered Alloys": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Thermic Alloys": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Tin": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 2",
+        "ratio": 1.5
+      },
+      {
+        "system": "Mildanji",
+        "body": "A 3",
+        "ratio": 1.5
+      },
+      {
+        "system": "Mildanji",
+        "body": "B 5",
+        "ratio": 1.5
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 2.3
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.4
+      }
+    ]
+  },
+  "Tungsten": {
+    "grade": "3",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 2",
+        "ratio": 1.3
+      },
+      {
+        "system": "Delkar",
+        "body": "5 A",
+        "ratio": 1.1
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 1.9
+      }
+    ]
+  },
+  "Unexpected Emission Data": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Unidentified Scan Archives": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Unknown Carapace": {
+    "grade": "2",
+    "type": "Manufactured"
+  },
+  "Unknown Energy Cell": {
+    "grade": "3",
+    "type": "Manufactured"
+  },
+  "Unknown Fragment": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Unknown Material Composition Data": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Unknown Organic Circuitry": {
+    "grade": "5",
+    "type": "Manufactured"
+  },
+  "Unknown Residue Data Analysis": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Unknown Ship Signature": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Unknown Structural Data": {
+    "grade": "2",
+    "type": "Data"
+  },
+  "Unknown Technology Components": {
+    "grade": "4",
+    "type": "Manufactured"
+  },
+  "Unknown Wake Data": {
+    "grade": "4",
+    "type": "Data"
+  },
+  "Untypical Shield Scans": {
+    "grade": "3",
+    "type": "Data"
+  },
+  "Unusual Encrypted Files": {
+    "grade": "1",
+    "type": "Data"
+  },
+  "Vanadium": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 3",
+        "ratio": 5.8
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 8.5
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 8.0
+      }
+    ]
+  },
+  "Worn Shield Emitters": {
+    "grade": "1",
+    "type": "Manufactured"
+  },
+  "Yttrium": {
+    "grade": "4",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 2",
+        "ratio": 1.4
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 2.1
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 2.1
+      }
+    ]
+  },
+  "Zinc": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "A 1",
+        "ratio": 6.2
+      },
+      {
+        "system": "Delkar",
+        "body": "1",
+        "ratio": 9.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 6.1
+      }
+    ]
+  },
+  "Zirconium": {
+    "grade": "2",
+    "type": "Raw material",
+    "find": [
+      {
+        "system": "Mildanji",
+        "body": "B 3",
+        "ratio": 2.5
+      },
+      {
+        "system": "Delkar",
+        "body": "5 A",
+        "ratio": 2.4
+      },
+      {
+        "system": "15 Psi Scorpii",
+        "body": "",
+        "ratio": 4.6
+      }
+    ]
+  }
+}
