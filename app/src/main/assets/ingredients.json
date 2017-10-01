@@ -64,7 +64,7 @@
   "Atypical Disrupted Wake Echoes": {
     "grade": "1",
     "type": "Data",
-    "find": [
+    "methods": [
       "High wake scanning",
       "Mission reward"
     ]
@@ -179,7 +179,7 @@
     "grade": "5",
     "type": "Manufactured"
   },
-  "Cracked Industrial Components": {
+  "Cracked Industrial Firmware": {
     "grade": "3",
     "type": "Data"
   },
