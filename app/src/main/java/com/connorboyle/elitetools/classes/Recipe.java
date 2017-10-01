@@ -37,9 +37,11 @@ public class Recipe implements Serializable {
     }
     public void addEffect(String effect, double min, double max) {
         if (module.contains("Laser") && effect.equals("Ammo Clip Size")) {
-            return;
+            return; // For Overcharged laser weapons
         }
-        if (module.contains("Beam") && effect.equals("Rate of Fire"))
+        if (module.contains("Beam") && effect.equals("Rate of Fire")) {
+            return; // This check may be redundant
+        }
         effects.put(effect, new double[] { min, max });
     }
 }
