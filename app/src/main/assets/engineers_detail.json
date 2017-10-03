@@ -1,34 +1,34 @@
 {
   "elvira": {
-    "eng_name": "Elvira Martuuk",
+    "name": "Elvira Martuuk",
     "system": "Khun",
     "discover_req": "none",
     "meeting_req": "Attain a distance 300 Ly from start",
     "unlock_req": "3x Soontill Relics"
   },
   "dweller": {
-    "eng_name": "The Dweller",
+    "name": "The Dweller",
     "system": "Wyrd",
     "discover_req": "none",
     "meeting_req": "Deal with 5 black markets",
     "unlock_req": "500,000 Cr"
   },
   "ryder": {
-    "eng_name": "Liz Ryder",
+    "name": "Liz Ryder",
     "system": "Eurybia",
     "discover_req": "none",
     "meeting_req": "Be cordial with Eurybia Blue Mafia",
     "unlock_req": "200x Landmines"
   },
   "farseer": {
-    "eng_name": "Felicity Farseer",
+    "name": "Felicity Farseer",
     "system": "Deciat",
     "discover_req": "none",
     "meeting_req": "Scout exploration rank",
     "unlock_req": "1x Meta Alloys"
   },
   "blaster": {
-    "eng_name": "Tod \"The Blaster\" McQuinn",
+    "name": "Tod \"The Blaster\" McQuinn",
     "system": "Wolf 397",
     "discover_req": "none",
     "meeting_req": "Earn 15 bounty vouchers",
@@ -36,105 +36,105 @@
   },
   "nemo": {
     "id": "nemo",
-    "eng_name": "Zacariah Nemo",
+    "name": "Zacariah Nemo",
     "system": "Yoru",
     "discover_req": "Elvira Martuuk (grade 3-4)",
     "meeting_req": "Be friendly with Party of Yoru",
     "unlock_req": "25x Xihe Companions"
   },
   "cheung": {
-    "eng_name": "Lei Cheung",
+    "name": "Lei Cheung",
     "system": "Laksak",
     "discover_req": "The Dweller (grade 3-4)",
     "meeting_req": "Trade in 50 markets",
     "unlock_req": "200x Gold"
   },
   "tani": {
-    "eng_name": "Hera Tani",
+    "name": "Hera Tani",
     "system": "Kuwemaki",
     "discover_req": "Liz Ryder (grade 3-4)",
     "meeting_req": "Outsider rank with Empire",
     "unlock_req": "50x Kamitra Cigars"
   },
   "juri": {
-    "eng_name": "Juri Ishmaak",
+    "name": "Juri Ishmaak",
     "system": "Giryak",
     "discover_req": "Felicity Farseer (grade 3-4)",
     "meeting_req": "Earn 50 combat bonds",
     "unlock_req": "100,000 Cr in combat bonds"
   },
   "selene": {
-    "eng_name": "Selene Jean",
+    "name": "Selene Jean",
     "system": "Kuk",
     "discover_req": "The Blaster (grade 3-4)",
     "meeting_req": "Refine 500 tons of ore",
     "unlock_req": "10x Painite"
   },
   "qwent": {
-    "eng_name": "Marco Qwent",
+    "name": "Marco Qwent",
     "system": "Sirius (permit required)",
     "discover_req": "Elvira Martuuk (grade 3-4)",
     "meeting_req": "Be allied with Sirius Corporation",
     "unlock_req": "25x Modular Terminals"
   },
   "ramtah": {
-    "eng_name": "Ram Tah",
+    "name": "Ram Tah",
     "system": "Meene",
     "discover_req": "Lei Cheung (grade 3-4)",
     "meeting_req": "Surveyor exploration rank",
     "unlock_req": "50x Classified Scan Databanks"
   },
   "dekker": {
-    "eng_name": "Col. Bris Dekker",
-    "system": "Sol (permit required",
+    "name": "Col. Bris Dekker",
+    "system": "Sol (permit required)",
     "discover_req": "Juri Ishmaak (grade 3-4)",
     "meeting_req": "Be friendly with Federation",
     "unlock_req": "1,000,000 Cr in combat bonds"
   },
   "didi": {
-    "eng_name": "Didi Vatermann",
+    "name": "Didi Vatermann",
     "system": "Leesti",
     "discover_req": "Selene Jean (grade 3-4)",
     "meeting_req": "Merchant trade rank",
     "unlock_req": "50x Lavian Brandy"
   },
   "palin": {
-    "eng_name": "Prof. Palin",
+    "name": "Prof. Palin",
     "system": "Maia",
     "discover_req": "Marco Qwent (grade 3-4)",
     "meeting_req": "Attain a distance 5,000 Ly from start",
     "unlock_req": "25x Unknown Fragments"
   },
   "jameson": {
-    "eng_name": "Lori Jameson",
+    "name": "Lori Jameson",
     "system": "Shinrarta Dezhra (permit required)",
     "discover_req": "Marco Qwent (grade 3-4)",
     "meeting_req": "Dangerous combat rank",
     "unlock_req": "25x Kongga Ale"
   },
   "tiana": {
-    "eng_name": "Tiana Fortune",
+    "name": "Tiana Fortune",
     "system": "Achenar (permit required)",
     "discover_req": "Hera Tani (grade 3-4)",
     "meeting_req": "Be friendly with Empire",
     "unlock_req": "50x Decoded Emission Data"
   },
   "sarge": {
-    "eng_name": "The Sarge",
+    "name": "The Sarge",
     "system": "Beta-3 Tucani",
     "discover_req": "Juri Ishmaak (grade 3-4)",
     "meeting_req": "Midshipman rank with Federal Navy",
     "unlock_req": "50x Shield Pattern Analysis"
   },
   "turner": {
-    "eng_name": "Bill Turner",
+    "name": "Bill Turner",
     "system": "Alioth (permit required)",
     "discover_req": "Selene Jean (grade 3-4)",
     "meeting_req": "Be friendly with Alliance",
     "unlock_req": "50x Bromellite"
   },
   "tarquin": {
-    "eng_name": "Broo Tarquin",
+    "name": "Broo Tarquin",
     "system": "Muang",
     "discover_req": "Hera Tani (grade 3-4)",
     "meeting_req": "Competent combat rank",
