@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.fragments.EngineersActivity;
 import com.google.gson.stream.JsonReader;
@@ -16,11 +17,10 @@ import java.util.ArrayList;
  * Created by Connor Boyle on 02-Oct-17.
  */
 
-public class GetEngineersTask extends AsyncTask<Void, Void, ArrayList<String>> {
-    private final EngineersActivity caller;
+public class GetEngineersTask extends ParseJsonTask<Void, Void, ArrayList<String>> {
 
-    public GetEngineersTask(EngineersActivity caller) {
-        this.caller = caller;
+    public GetEngineersTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.ENGINEERS);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class GetEngineersTask extends AsyncTask<Void, Void, ArrayList<String>> {
         ArrayList<String> engrList = new ArrayList<>();
 
         try {
-            InputStream is = caller.getContext().getAssets().open("engineers_detail.json");
+            InputStream is = ((Fragment)caller).getContext().getAssets().open("engineers_detail.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
@@ -55,10 +55,5 @@ public class GetEngineersTask extends AsyncTask<Void, Void, ArrayList<String>> {
         }
 
         return engrList;
-    }
-
-    @Override
-    protected void onPostExecute(ArrayList<String> strings) {
-        caller.onEngineersTaskCompleted(strings);
     }
 }

@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.google.gson.stream.JsonReader;
@@ -19,27 +20,19 @@ import java.util.ArrayList;
  * A few modifications have only a grade 3 option, so returning a count will give unwanted results
  */
 
-public class GetGradesTask extends AsyncTask<String, Void, ArrayList<String>> {
-    private final BlueprintsActivity caller;
+public class GetGradesTask extends ParseJsonTask<String, Void, ArrayList<String>> {
 
-    public GetGradesTask(BlueprintsActivity caller) {
-        this.caller = caller;
+    public GetGradesTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.GRADES);
     }
 
     @Override
     protected ArrayList<String> doInBackground(String... params) {
-        return getGradesList(params[0]);
-    }
+        final String modID = params[0];
 
-    @Override
-    protected void onPostExecute(ArrayList<String> strings) {
-        caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.GRADES, strings);
-    }
-
-    private ArrayList<String> getGradesList(String modID) {
         ArrayList<String> gradesList = new ArrayList<>();
         try {
-            InputStream is = caller.getContext().getAssets().open("blueprints_detail.json");
+            InputStream is = ((Fragment) caller).getContext().getAssets().open("blueprints_detail.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);

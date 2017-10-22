@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.connorboyle.elitetools.classes.Recipe;
@@ -20,28 +21,24 @@ import java.nio.charset.Charset;
  * Does not include secondary or experimental effects.
  */
 
-public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
-    private BlueprintsActivity caller;
+public class GetRecipeTask extends ParseJsonTask<String, Void, Recipe> {
 
-    public GetRecipeTask(BlueprintsActivity caller) {
-        this.caller = caller;
+    public GetRecipeTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.RECIPE);
     }
 
     @Override
     protected Recipe doInBackground(String... params) {
-        return getRecipe(params[0], params[1], params[2], params[3]);
-    }
+        final String module = params[0];
+        final String type = params[1];
+        final String modification = params[2];
+        final String grade = params[3];
 
-    @Override
-    protected void onPostExecute(Recipe recipe) {
-        caller.onRecipeTaskCompleted(recipe);
-    }
-
-    private Recipe getRecipe(String module, String type, String modification, String grade) {
         Recipe recipe = new Recipe(module, modification, grade);
         String modID = (modification +"-"+ type).toLowerCase().replace(' ', '-');
+
         try {
-            InputStream is = caller.getContext().getAssets().open("blueprints_detail.json");
+            InputStream is = ((Fragment)caller).getContext().getAssets().open("blueprints_detail.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
@@ -53,6 +50,7 @@ public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
                     while (jr.hasNext()) {
                         if (jr.nextName().equals(grade)) {
                             jr.beginObject();
+
                             // Add ingredients to recipe
                             if (jr.nextName().equals("ingredients")) {
                                 jr.beginArray();
@@ -61,6 +59,7 @@ public class GetRecipeTask extends AsyncTask<String, Void, Recipe> {
                                 }
                                 jr.endArray();
                             }
+
                             // Add effects to recipe
                             if (jr.nextName().equals("effects")) {
                                 jr.beginArray();

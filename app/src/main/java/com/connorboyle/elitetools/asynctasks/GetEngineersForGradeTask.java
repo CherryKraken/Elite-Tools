@@ -1,8 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
-import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
-import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.connorboyle.elitetools.classes.Recipe;
 import com.google.gson.stream.JsonReader;
 
@@ -16,26 +15,18 @@ import java.nio.charset.Charset;
  * Created by Connor Boyle on 28-Sep-17.
  */
 
-public class GetEngineersForGradeTask extends AsyncTask<Recipe, Void, Recipe> {
-    BlueprintsActivity caller;
+public class GetEngineersForGradeTask extends ParseJsonTask<Recipe, Void, Recipe> {
 
-    public GetEngineersForGradeTask(BlueprintsActivity caller) {
-        this.caller = caller;
+    public GetEngineersForGradeTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.ENGINEERS_FOR_GRADE);
     }
 
     @Override
     protected Recipe doInBackground(Recipe... params) {
-        return getEngineers(params[0]);
-    }
+        Recipe recipe = params[0];
 
-    @Override
-    protected void onPostExecute(Recipe recipe) {
-        caller.onRecipeTaskCompleted(recipe);
-    }
-
-    private Recipe getEngineers(Recipe recipe) {
         try {
-            InputStream is = caller.getContext().getAssets().open("modules_index.json");
+            InputStream is = ((Fragment)caller).getContext().getAssets().open("modules_index.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);

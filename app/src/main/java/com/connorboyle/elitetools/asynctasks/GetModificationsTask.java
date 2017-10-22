@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.google.gson.stream.JsonReader;
@@ -18,27 +19,19 @@ import java.util.ArrayList;
  * AsyncTask to get a list of all engineer modifications for a given module
  */
 
-public class GetModificationsTask extends AsyncTask<String, Void, ArrayList<String>> {
-    private final BlueprintsActivity caller;
-
-    public GetModificationsTask(BlueprintsActivity caller) {
-        this.caller = caller;
+public class GetModificationsTask extends ParseJsonTask<String, Void, ArrayList<String>> {
+    public GetModificationsTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.MODIFICATIONS);
     }
 
     @Override
     protected ArrayList<String> doInBackground(String... params) {
-        return getModsList(params[0]);
-    }
+        final String module = params[0];
 
-    @Override
-    protected void onPostExecute(ArrayList<String> strings) {
-        caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.MODIFICATIONS, strings);
-    }
-
-    private ArrayList<String> getModsList(String module) {
         ArrayList<String> modsList = new ArrayList<>();
+
         try {
-            InputStream is = caller.getContext().getAssets().open("modules_index.json");
+            InputStream is = ((Fragment)caller).getContext().getAssets().open("modules_index.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
@@ -52,10 +45,15 @@ public class GetModificationsTask extends AsyncTask<String, Void, ArrayList<Stri
             while (jr.hasNext()) {
                 if (jr.nextName().equals("Blueprints")) {
                     jr.beginArray();
+
                     while (jr.hasNext()) {
                         modsList.add(jr.nextString());
                     }
+
                     jr.endArray();
+                    jr.close();
+                    is.close();
+                    return modsList;
                 } else {
                     jr.skipValue();
                 }

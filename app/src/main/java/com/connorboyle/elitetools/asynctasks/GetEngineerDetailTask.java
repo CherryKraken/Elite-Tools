@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.classes.Engineer;
 import com.connorboyle.elitetools.fragments.EngineersActivity;
@@ -19,12 +20,12 @@ import java.io.InputStreamReader;
  * Created by Connor Boyle on 03-Oct-17.
  */
 
-public class GetEngineerDetailTask extends AsyncTask <String, Void, Engineer> {
-    private final EngineersActivity caller;
+public class GetEngineerDetailTask extends ParseJsonTask <String, Void, Engineer> {
 
-    public GetEngineerDetailTask(EngineersActivity caller) {
-        this.caller = caller;
+    public GetEngineerDetailTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.ENGINEER_INFO);
     }
+
     @Override
     protected Engineer doInBackground(String... params) {
         String engrID = params[0];
@@ -32,7 +33,7 @@ public class GetEngineerDetailTask extends AsyncTask <String, Void, Engineer> {
 
         try {
             InputStreamReader isr = new InputStreamReader(
-                    caller.getContext().getAssets().open("engineers_detail.json"));
+                    ((Fragment)caller).getContext().getAssets().open("engineers_detail.json"));
             JsonReader jr = new JsonReader(isr);
             jr.beginObject();
 
@@ -41,7 +42,6 @@ public class GetEngineerDetailTask extends AsyncTask <String, Void, Engineer> {
             }
 
             JsonElement je = new JsonParser().parse(jr);
-
             engineer = new Gson().fromJson(je, Engineer.class);
 
             jr.close();
@@ -50,10 +50,5 @@ public class GetEngineerDetailTask extends AsyncTask <String, Void, Engineer> {
             ioe.printStackTrace();
         }
         return engineer;
-    }
-
-    @Override
-    protected void onPostExecute(Engineer engineer) {
-        caller.onEngineerObjectCreated(engineer);
     }
 }

@@ -1,6 +1,5 @@
 package com.connorboyle.elitetools.asynctasks;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
@@ -28,7 +27,7 @@ import java.util.ArrayList;
  * Created by Connor Boyle on 21-Oct-17.
  */
 
-public class GetSystemsListTask extends AsyncTask<String, Void, ArrayList<System>> {
+public class GetSystemsExtendedTask extends ParseJsonTask<String, Void, ArrayList<System>> {
     private static final String URL_BASE = "http://elitebgs.kodeblox.com/api/eddb/v1/systems?";
     private static final String AND = "&";
     private static final String NEXTID = "idnext=";
@@ -41,10 +40,8 @@ public class GetSystemsListTask extends AsyncTask<String, Void, ArrayList<System
     @Nullable
     private System lastSystemListed;
 
-    private final MaterialsFinderActivity caller;
-
-    public GetSystemsListTask(MaterialsFinderActivity caller, System curSystem, @Nullable System lastListed, int maxDist) {
-        this.caller = caller;
+    public GetSystemsExtendedTask(OnTaskCompleteHelper caller, System curSystem, @Nullable System lastListed, int maxDist) {
+        super(caller, OnTaskCompleteHelper.Task.SYSTEMS_FULL);
         this.mMaxDistance = maxDist;
         this.curSystem = curSystem;
         this.lastSystemListed = lastListed;
@@ -103,11 +100,5 @@ public class GetSystemsListTask extends AsyncTask<String, Void, ArrayList<System
         }
 
         return systems;
-    }
-
-
-    @Override
-    protected void onPostExecute(ArrayList<System> systems) {
-        caller.onSystemListTaskCompleted(systems);
     }
 }

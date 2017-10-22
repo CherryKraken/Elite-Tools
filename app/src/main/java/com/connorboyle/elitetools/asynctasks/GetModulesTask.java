@@ -1,6 +1,7 @@
 package com.connorboyle.elitetools.asynctasks;
 
 import android.os.AsyncTask;
+import android.support.v4.app.Fragment;
 
 import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.google.gson.stream.JsonReader;
@@ -18,27 +19,17 @@ import java.util.ArrayList;
  * AsyncTask to get a list of all ship modules that can be modified by engineers
  */
 
-public class GetModulesTask extends AsyncTask<Void, Void, ArrayList<String>> {
-    private BlueprintsActivity caller;
+public class GetModulesTask extends ParseJsonTask<Void, Void, ArrayList<String>> {
 
-    public GetModulesTask(BlueprintsActivity caller) {
-        this.caller = caller;
+    public GetModulesTask(OnTaskCompleteHelper caller) {
+        super(caller, OnTaskCompleteHelper.Task.MODULES);
     }
 
     @Override
     protected ArrayList<String> doInBackground(Void... params) {
-        return getModuleList();
-    }
-
-    @Override
-    protected void onPostExecute(ArrayList<String> strings) {
-        caller.onBackgroundTaskCompleted(BlueprintsActivity.JSONTask.MODULES, strings);
-    }
-
-    private ArrayList<String> getModuleList() {
         ArrayList<String> moduleNames = new ArrayList<>();
         try {
-            InputStream is = caller.getContext().getAssets().open("modules_index.json");
+            InputStream is = ((Fragment)caller).getContext().getAssets().open("modules_index.json");
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(is, Charset.forName("UTF-8")));
             JsonReader jr = new JsonReader(br);
