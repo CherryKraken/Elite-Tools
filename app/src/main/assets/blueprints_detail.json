@@ -837,7 +837,7 @@
       ]
     }
   },
-  "rapid-fire-harpoint": {
+  "rapid-fire-hardpoint": {
     "1": {
       "ingredients": [
         "Mechanical Scrap"
@@ -2574,8 +2574,610 @@
       ]
     }
   },
-  "reinforced-drives": {},
-  "faster-boot-sequence-fsd": {},
-  "increased-range-fsd": {},
-  "shielded-fsd": {}
+  "reinforced-drives": {
+    "1": {
+      "ingredients": [
+        "Carbon"
+      ],
+      "effects": [
+        { "Integrity": [14, 30] },
+        { "Mass": [10, 0] },
+        { "Optimal Multiplier": [-3, 0] },
+        { "Thermal Load": [0, -10] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Heat Conduction Wiring",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [30, 50] },
+        { "Mass": [20, 5] },
+        { "Optimal Multiplier": [-5, -2] },
+        { "Thermal Load": [-6, 20] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Heat Conduction Wiring",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [45, 70] },
+        { "Mass": [30, 10] },
+        { "Optimal Multiplier": [-6, -3] },
+        { "Thermal Load": [-10, -30] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Compound Shielding",
+        "Heat Dispersion Plate",
+        "High Density Composites"
+      ],
+      "effects": [
+        { "Integrity": [60, 90] },
+        { "Mass": [40, 14] },
+        { "Optimal Multiplier": [-9, -4] },
+        { "Thermal Load": [-15, -40] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Heat Exchangers",
+        "Imperial Shielding",
+        "Proprietary Composites"
+      ],
+      "effects": [
+        { "Integrity": [75, 110] },
+        { "Mass": [50, 20] },
+        { "Optimal Multiplier": [-10, -5] },
+        { "Thermal Load": [-20, -50] }
+      ]
+    }
+  },
+  "faster-boot-sequence-fsd": {
+    "1": {
+      "ingredients": [
+        "Grid Resistors"
+      ],
+      "effects": [
+        { "Boot Time": [-10, -20] },
+        { "Integrity": [-5, 0] },
+        { "Power Draw": [4, 0] },
+        { "Thermal Load": [5, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Chromium",
+        "Grid Resistors"
+      ],
+      "effects": [
+        { "Boot Time": [-20, -35] },
+        { "Integrity": [-10, -3] },
+        { "Power Draw": [10, 2] },
+        { "Thermal Load": [10, 5] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Grid Resistors",
+        "Heat Dispersion Plate",
+        "Selenium"
+      ],
+      "effects": [
+        { "Boot Time": [-30, -50] },
+        { "Integrity": [-15, -6] },
+        { "Power Draw": [14, 5] },
+        { "Thermal Load": [15, 10] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Cadmium",
+        "Heat Exchangers",
+        "Hybrid Capacitors"
+      ],
+      "effects": [
+        { "Boot Time": [-40, -65] },
+        { "Integrity": [-20, -9] },
+        { "Power Draw": [20, 9] },
+        { "Thermal Load": [20, 15] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Electrochemical Arrays",
+        "Heat Vanes",
+        "Tellurium"
+      ],
+      "effects": [
+        { "Boot Time": [-50, -80] },
+        { "Integrity": [-25, -12] },
+        { "Power Draw": [25, 10] },
+        { "Thermal Load": [25, 20] }
+      ]
+    }
+  },
+  "increased-range-fsd": {
+    "1": {
+      "ingredients": [
+        "Atypical Disrupted Wake Echoes"
+      ],
+      "effects": [
+        { "Integrity": [-5, 0] },
+        { "Mass": [5, 0] },
+        { "Optimised Mass": [4, 10] },
+        { "Power Draw": [4, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Atypical Disrupted Wake Echoes",
+        "Chemical Processors"
+      ],
+      "effects": [
+        { "Integrity": [-10, -3] },
+        { "Mass": [14, 5] },
+        { "Optimised Mass": [8, 20] },
+        { "Power Draw": [10, 2] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chemical Processors",
+        "Phosphorus",
+        "Strange Wake Solutions"
+      ],
+      "effects": [
+        { "Integrity": [-15, -6] },
+        { "Mass": [25, 10] },
+        { "Optimised Mass": [12, 30] },
+        { "Power Draw": [14, 5] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Chemical Distillery",
+        "Eccentric Hyperspace Trajectories",
+        "Manganese"
+      ],
+      "effects": [
+        { "Integrity": [-20, -9] },
+        { "Mass": [35, 14] },
+        { "Optimised Mass": [16, 40] },
+        { "Power Draw": [20, 9] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Arsenic",
+        "Chemical Manipulators",
+        "Datamined Wake Exceptions"
+      ],
+      "effects": [
+        { "Integrity": [-25, -12] },
+        { "Mass": [45, 20] },
+        { "Optimised Mass": [20, 50] },
+        { "Power Draw": [25, 10] }
+      ]
+    }
+  },
+  "shielded-fsd": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Integrity": [20, 25] },
+        { "Mass": [30, 25] },
+        { "Optimised Mass": [-3, 0] },
+        { "Thermal Load": [0, -5] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [30, 50] },
+        { "Mass": [35, 20] },
+        { "Optimised Mass": [-6, -2] },
+        { "Thermal Load": [-5, -10] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "Shielding Sensors",
+        "Zinc"
+      ],
+      "effects": [
+        { "Integrity": [40, 75] },
+        { "Mass": [40, 15] },
+        { "Optimised Mass": [-9, -4] },
+        { "Thermal Load": [-10, -15] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Compound Shielding",
+        "High Density Composites",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [50, 100] },
+        { "Mass": [45, 10] },
+        { "Optimised Mass": [-12, -6] },
+        { "Thermal Load": [-15, -20] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Imperial Shielding",
+        "Proprietary Composites",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Integrity": [60, 125] },
+        { "Mass": [50, 5] },
+        { "Optimised Mass": [-15, -8] },
+        { "Thermal Load": [-20, -25] }
+      ]
+    }
+  },
+  "lightweight-life-support": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-20, -10] },
+        { "Mass": [-30, -40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-30, -20] },
+        { "Mass": [-40, -50] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-40, -30] },
+        { "Mass": [-40, -60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Components",
+        "Phase Alloys",
+        "Proto Light Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-50, -40] },
+        { "Mass": [-60, -70] }
+      ]
+    }
+  },
+  "reinforced-life-support": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Mass": [100, 40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Mass": [150, 80] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Nickel",
+        "Shield Emitters",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Mass": [200, 120] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Molybdenum",
+        "Tungsten",
+        "Zinc"
+      ],
+      "effects": [
+        { "Integrity": [80, 200] },
+        { "Mass": [250, 160] }
+      ]
+    }
+  },
+  "shielded-life-support": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Power Draw": [30, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Power Draw": [60, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Power Draw": [90, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [80, 200] },
+        { "Power Draw": [120, 80] }
+      ]
+    }
+  },
+  "charged-enhanced-distributor": {
+    "1": {
+      "ingredients": [
+        "Specialized Legacy Firmware"
+      ],
+      "effects": [
+        { "Engines Capacity": [-3, 0] },
+        { "Engines Recharge": [4, 12] },
+        { "Systems Capacity": [-3, 0] },
+        { "Systems Recharge": [4, 12] },
+        { "Weapons Capacity": [-3, 0] },
+        { "Weapons Recharge": [4, 12] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Chemical Processors",
+        "Specialized Legacy Firmware"
+      ],
+      "effects": [
+        { "Engines Capacity": [-6, -1] },
+        { "Engines Recharge": [8, 18] },
+        { "Systems Capacity": [-6, -1] },
+        { "Systems Recharge": [8, 18] },
+        { "Weapons Capacity": [-6, -1] },
+        { "Weapons Recharge": [8, 18] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chemical Distillery",
+        "Grid Resistors",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        { "Engines Capacity": [-9, -2] },
+        { "Engines Recharge": [12, 24] },
+        { "Systems Capacity": [-9, -2] },
+        { "Systems Recharge": [12, 24] },
+        { "Weapons Capacity": [-9, -2] },
+        { "Weapons Recharge": [12, 24] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Chemical Manipulators",
+        "Cracked Industrial Firmware",
+        "Hybrid Capacitors"
+      ],
+      "effects": [
+        { "Engines Capacity": [-12, -3] },
+        { "Engines Recharge": [16, 30] },
+        { "Systems Capacity": [-12, -3] },
+        { "Systems Recharge": [16, 30] },
+        { "Weapons Capacity": [-12, -3] },
+        { "Weapons Recharge": [16, 30] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Chemical Manipulators",
+        "Cracked Industrial Firmware",
+        "Exquisite Focus Crystals"
+      ],
+      "effects": [
+        { "Engines Capacity": [-15, -4] },
+        { "Engines Recharge": [20, 36] },
+        { "Systems Capacity": [-15, -4] },
+        { "Systems Recharge": [20, 36] },
+        { "Weapons Capacity": [-15, -4] },
+        { "Weapons Recharge": [20, 36] }
+      ]
+    }
+  },
+  "engine-focused-distributor": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [5, 20] },
+        { "Engines Recharge": [2, 10] },
+        { "Systems Capacity": [-5, 0] },
+        { "Systems Recharge": [-2, 0] },
+        { "Weapons Capacity": [-5, 0] },
+        { "Weapons Recharge": [-2, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [10, 30] },
+        { "Engines Recharge": [4, 15] },
+        { "Systems Capacity": [-10, -2] },
+        { "Systems Recharge": [-4, -1] },
+        { "Weapons Capacity": [-10, -2] },
+        { "Weapons Recharge": [-4, -1] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Anomalous Bulk Scan Data",
+        "Chromium",
+        "Electrochemical Arrays"
+      ],
+      "effects": [
+        { "Engines Capacity": [15, 40] },
+        { "Engines Recharge": [6, 20] },
+        { "Systems Capacity": [-15, -4] },
+        { "Systems Recharge": [-6, -2] },
+        { "Weapons Capacity": [-15, -4] },
+        { "Weapons Recharge": [-6, -2] }
+      ]
+    }
+  },
+  "high-charge-capacity-distributor": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [4, 10] },
+        { "Engines Recharge": [-5, 0] },
+        { "Systems Capacity": [4, 10] },
+        { "Systems Recharge": [-5, 0] },
+        { "Weapons Capacity": [4, 10] },
+        { "Weapons Recharge": [-5, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Chromium",
+        "Specialized Legacy Firmware"
+      ],
+      "effects": [
+        { "Engines Capacity": [8, 15] },
+        { "Engines Recharge": [-10, -4] },
+        { "Systems Capacity": [8, 10] },
+        { "Systems Recharge": [-10, 0] },
+        { "Weapons Capacity": [8, 10] },
+        { "Weapons Recharge": [-10, 0] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Chromium",
+        "High Density Composites",
+        "Specialized Legacy Firmware"
+      ],
+      "effects": [
+        { "Engines Capacity": [12, 20] },
+        { "Engines Recharge": [-15, -8] },
+        { "Systems Capacity": [12, 10] },
+        { "Systems Recharge": [-15, -8] },
+        { "Weapons Capacity": [12, 10] },
+        { "Weapons Recharge": [-15, -8] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Modified Consumer Firmware",
+        "Proprietary Composites",
+        "Selenium"
+      ],
+      "effects": [
+        { "Engines Capacity": [16, 25] },
+        { "Engines Recharge": [-20, -12] },
+        { "Systems Capacity": [16, 10] },
+        { "Systems Recharge": [-20, -12] },
+        { "Weapons Capacity": [16, 10] },
+        { "Weapons Recharge": [-20, -12] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Cracked Industrial Firmware",
+        "Military Supercapacitors",
+        "Proprietary Composites"
+      ],
+      "effects": [
+        { "Engines Capacity": [20, 30] },
+        { "Engines Recharge": [-25, -16] },
+        { "Systems Capacity": [20, 10] },
+        { "Systems Recharge": [-25, -16] },
+        { "Weapons Capacity": [20, 10] },
+        { "Weapons Recharge": [-25, -16] }
+      ]
+    }
+  },
+  "shielded-distributor": {},
+  "system-focused-distributor": {},
+  "weapon-focused-distributor": {},
+  "lightweight-sensors": {},
+  "long-range-sensors": {},
+  "wide-angle-sensors": {},
+  "shielded-afmu": {},
+  "expanded-capture-arc-interdictor": {},
+  "long-range-interdictor": {},
+  "shielded-scoop": {},
+  "rapid-charge-scb": {},
+  "specialised-scb": {},
+  "enhanced-low-power-shield": {},
+  "kinetic-resistant-shield": {},
+  "reinforced-shield": {},
+  "thermal-resistant-shield": {},
+  "fast-scan-dss": {},
+  "long-range-dss": {},
+  "wide-angle-dss": {},
+  "blast-resistant-hrp": {},
+  "heavy-duty-hrp": {},
+  "kinetic-resistant-hrp": {},
+  "lightweight-hrp": {},
+  "thermal-resistant-hrp": {},
+  "blast-resistant-armour": {},
+  "heavy-duty-armour": {},
+  "kinetic-resistant-armour": {},
+  "lightweight-armour": {},
+  "thermal-resistant-armour": {}
 }
