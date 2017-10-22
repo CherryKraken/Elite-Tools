@@ -13,7 +13,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
@@ -37,4 +37,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Wolf 397" />
+
+    <ListView
+        android:id="@+id/lvRelSystems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
