@@ -8,9 +8,9 @@ import android.os.AsyncTask;
 
 public abstract class ParseJsonTask<A, B, C> extends AsyncTask<A, B, C> {
     protected final OnTaskCompleteHelper caller;
-    protected final OnTaskCompleteHelper.Task task;
+    private final OnTaskCompleteHelper.Task task;
 
-    protected ParseJsonTask(OnTaskCompleteHelper caller, OnTaskCompleteHelper.Task task) {
+    public ParseJsonTask(OnTaskCompleteHelper caller, OnTaskCompleteHelper.Task task) {
         this.caller = caller;
         this.task = task;
     }
