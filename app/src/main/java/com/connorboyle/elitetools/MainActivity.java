@@ -19,6 +19,7 @@ import com.connorboyle.elitetools.fragments.BearingCalculator;
 import com.connorboyle.elitetools.fragments.BlueprintsActivity;
 import com.connorboyle.elitetools.fragments.EngineersActivity;
 import com.connorboyle.elitetools.fragments.HabZoneCalculator;
+import com.connorboyle.elitetools.fragments.HomeView;
 import com.connorboyle.elitetools.fragments.MaterialsFinderActivity;
 import com.connorboyle.elitetools.fragments.Notebook;
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.flContent, Notebook.class.newInstance())
+                    .replace(R.id.flContent, HomeView.class.newInstance())
                     .commit();
         } catch (Exception e) {
             e.printStackTrace();
