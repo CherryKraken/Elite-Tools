@@ -6,13 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.asynctasks.GetEngineerDetailTask;
 import com.connorboyle.elitetools.asynctasks.GetEngineersTask;
+import com.connorboyle.elitetools.classes.Engineer;
 
 import java.util.ArrayList;
 
@@ -49,6 +52,24 @@ public class EngineersActivity extends Fragment {
         }
 
         selEngineers.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, android.R.id.text1, engrNames));
+        selEngineers.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                new GetEngineerDetailTask(EngineersActivity.this).execute(engrIDs.get(position));
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+
+    public void onEngineerObjectCreated(Engineer engineer) {
+        ((TextView) v.findViewById(R.id.tvEngrName)).setText(engineer.name);
+        ((TextView) v.findViewById(R.id.tvEngrSystem)).setText(engineer.system);
+        ((TextView) v.findViewById(R.id.tvDReq)).setText(engineer.discover_req);
+        ((TextView) v.findViewById(R.id.tvMReq)).setText(engineer.meeting_req);
+        ((TextView) v.findViewById(R.id.tvUReq)).setText(engineer.unlock_req);
     }
 }
