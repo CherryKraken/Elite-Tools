@@ -20,7 +20,9 @@ import com.connorboyle.elitetools.asynctasks.GetGradesTask;
 import com.connorboyle.elitetools.asynctasks.GetModificationsTask;
 import com.connorboyle.elitetools.asynctasks.GetModulesTask;
 import com.connorboyle.elitetools.asynctasks.GetRecipeTask;
+import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
 import com.connorboyle.elitetools.classes.Recipe;
+import com.connorboyle.elitetools.classes.System;
 
 import java.util.ArrayList;
 
@@ -28,7 +30,7 @@ import java.util.ArrayList;
  * Created by Connor Boyle on 13-Sep-17.
  */
 
-public class BlueprintsActivity extends Fragment {
+public class BlueprintsActivity extends Fragment implements OnTaskCompleteHelper {
 
     public enum JSONTask { MODULES, MODIFICATIONS, GRADES, RECIPE }
 
@@ -47,9 +49,11 @@ public class BlueprintsActivity extends Fragment {
         return v;
     }
 
-    public void onBackgroundTaskCompleted(JSONTask taskCompleted, ArrayList<String> strings) {
-        switch (taskCompleted) {
+    @Override
+    public void onAsyncTaskComplete(Task task, Object obj) {
+        switch (task) {
             case MODULES:
+                ArrayList<String> strings = (ArrayList<String>) obj;
                 moduleList = new ArrayList<>();
                 typeList = new ArrayList<>();
                 int i = 0;
@@ -66,7 +70,7 @@ public class BlueprintsActivity extends Fragment {
                         getContext(), android.R.layout.simple_list_item_1, moduleList));
                 break;
             case MODIFICATIONS:
-                modsList = strings;
+                modsList = (ArrayList<String>) obj;
                 modsList.add(0, "Select a modification...");
                 selModifications.setAdapter(new ArrayAdapter<>(
                         getContext(), android.R.layout.simple_list_item_1, modsList));
@@ -74,22 +78,19 @@ public class BlueprintsActivity extends Fragment {
             case GRADES:
                 disableRadioButtons();
                 rbGrades.setEnabled(true);
-                for (String s : strings) {
+                for (String s : (ArrayList<String>) obj) {
                     rbArray[Integer.valueOf(s) - 1].setEnabled(true);
                 }
                 break;
-        }
-    }
-
-    public void onRecipeTaskCompleted(Recipe recipe) {
-        if (recipe.engineers.isEmpty()) {
-            new GetEngineersForGradeTask(this).execute(recipe);
-        } else {
-            Bundle b = new Bundle();
-            b.putSerializable("recipe", recipe);
-            DialogFragment dialog = new RecipeDialog();
-            dialog.setArguments(b);
-            dialog.show(getActivity().getFragmentManager(), "recipe");
+            case RECIPE:
+                new GetEngineersForGradeTask(this).execute((Recipe)obj);
+                break;
+            case ENGINEERS_FOR_GRADE:
+                Bundle b = new Bundle();
+                b.putSerializable("recipe", (Recipe) obj);
+                DialogFragment dialog = new RecipeDialog();
+                dialog.setArguments(b);
+                dialog.show(getActivity().getFragmentManager(), "recipe");
         }
     }
 
