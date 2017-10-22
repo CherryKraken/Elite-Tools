@@ -11,6 +11,7 @@ public interface OnTaskCompleteHelper {
         SYSTEM_INFO,
         RECIPE,
         INGREDIENTS,
+        INGREDIENT_INFO,
         GRADES,
         MODIFICATIONS,
         MODULES,
