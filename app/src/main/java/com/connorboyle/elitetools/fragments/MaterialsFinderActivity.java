@@ -9,11 +9,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.connorboyle.elitetools.R;
 import com.connorboyle.elitetools.asynctasks.GetIngredientsTask;
+import com.connorboyle.elitetools.asynctasks.GetSystemsListTask;
 import com.connorboyle.elitetools.classes.Material;
+import com.connorboyle.elitetools.classes.System;
 
 import java.util.ArrayList;
 
@@ -28,11 +32,15 @@ public class MaterialsFinderActivity extends Fragment {
     private AutoCompleteTextView etMatToFind, etCurSystem;
 
     private ArrayList<String> materials;
+    private ArrayList<System> systems;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.mat_finder_layout, container, false);
+        systems = new ArrayList<>();
         setupControls();
         new GetIngredientsTask(this).execute();
+        new GetSystemsListTask(this, new System("Sol", 0,0,0), null, 500).execute(
+                "statename=outbreak", "allegiancename=independent");
         return v;
     }
 
@@ -73,5 +81,20 @@ public class MaterialsFinderActivity extends Fragment {
 
     public void onMaterialInfoTaskCompleted(Material m) {
 
+    }
+
+    public void onSystemListTaskCompleted(ArrayList<System> list) {
+        if (list != null && list.size() > 1) {
+            this.systems.addAll(list);
+            new GetSystemsListTask(this, new System("Sol", 0,0,0), systems.get(systems.size()-1), 500).execute(
+                    "statename=outbreak", "allegiancename=independent");
+        } else {
+            ArrayList<String> strings = new ArrayList<>();
+            for (System s : systems) {
+                strings.add(String.format("%s (%f)", s.name, s.distanceTo(new System("Sol", 0,0,0))));
+            }
+            ((ListView) v.findViewById(R.id.lvRelSystems)).setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, android.R.id.text1, strings));
+            Toast.makeText(getContext(), strings.size() + "", Toast.LENGTH_SHORT).show();
+        }
     }
 }
