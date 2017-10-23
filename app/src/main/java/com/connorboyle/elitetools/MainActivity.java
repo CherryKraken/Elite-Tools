@@ -22,6 +22,7 @@ import com.connorboyle.elitetools.fragments.HabZoneCalculator;
 import com.connorboyle.elitetools.fragments.HomeView;
 import com.connorboyle.elitetools.fragments.MaterialsFinderActivity;
 import com.connorboyle.elitetools.fragments.Notebook;
+import com.connorboyle.elitetools.fragments.SystemFinder;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
@@ -86,6 +87,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_engineers:
                 fragClass = EngineersActivity.class;
+                break;
+            case R.id.nav_home:
+                fragClass = HomeView.class;
+                break;
+            case R.id.nav_systems:
+                fragClass = SystemFinder.class;
                 break;
             case R.id.nav_ext_reddit:
                 Intent browserIntent = new Intent(

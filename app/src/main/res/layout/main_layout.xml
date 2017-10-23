@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:paddingTop="50dp">
 
     <AutoCompleteTextView
         android:id="@+id/etHomeCurSystem"
@@ -9,4 +11,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:completionHint="Enter current system" />
+
+    <Button
+        android:id="@+id/btnSaveSystem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Save Location" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/home_page_text"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btnDiscord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discord" />
+        <android.support.v4.widget.Space
+            android:layout_width="30dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnGithub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Github" />
+    </LinearLayout>
 </LinearLayout>
