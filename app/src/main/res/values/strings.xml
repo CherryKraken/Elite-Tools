@@ -2,4 +2,72 @@
     <string name="app_name">Elite Tools</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="home_page_text">
+        This app is a continuous work-in-progress, meant to challenge and test my abilities as a
+        programmer. It is not meant as a full replacement for current tools like Inara and Coriolis.
+        If you find a bug, or the app crashes unexpectedly, send me a message through Discord (@CherryKraken#0483) or the
+        Github project\'s Issue Tracker. I am also open to feature requests, though some may be
+        outside of my ability to implement, or may require me to set up a web-based file server
+        (e.g. serving EDDB\'s 12+ GB \"bodies\" file).\n\n
+        CMDR CherryKraken
+    </string>
+    <string-array name="distance_options">
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="government_options">
+        <item>none</item>
+        <item>anarchy</item>
+        <item>communism</item>
+        <item>confederacy</item>
+        <item>corporate</item>
+        <item>cooperative</item>
+        <item>democracy</item>
+        <item>dictatorship</item>
+        <item>feudal</item>
+        <item>imperial</item>
+        <item>patronage</item>
+        <item>prison colony</item>
+        <item>theocracy</item>
+        <item>workshop</item>
+        <item>engineer</item>
+    </string-array>
+    <string-array name="allegiance_options">
+        <item>none</item>
+        <item>alliance</item>
+        <item>empire</item>
+        <item>federation</item>
+        <item>independent</item>
+        <item>pilots federation</item>
+    </string-array>
+    <string-array name="economy_options">
+        <item>none</item>
+        <item>agriculture</item>
+        <item>extraction</item>
+        <item>high tech</item>
+        <item>industrial</item>
+        <item>military</item>
+        <item>refinery</item>
+        <item>service</item>
+        <item>terraforming</item>
+        <item>tourism</item>
+        <item>colony</item>
+    </string-array>
+    <string-array name="state_options">
+        <item>none</item>
+        <item>boom</item>
+        <item>bust</item>
+        <item>famine</item>
+        <item>civil unrest</item>
+        <item>civil war</item>
+        <item>election</item>
+        <item>expansion</item>
+        <item>lockdown</item>
+        <item>outbreak</item>
+        <item>war</item>
+        <item>retreat</item>
+        <item>investment</item>
+    </string-array>
 </resources>
