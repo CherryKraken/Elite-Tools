@@ -32,8 +32,6 @@ import java.util.ArrayList;
 
 public class BlueprintsActivity extends Fragment implements OnTaskCompleteHelper {
 
-    public enum JSONTask { MODULES, MODIFICATIONS, GRADES, RECIPE }
-
     private ArrayList<String> moduleList, modsList, typeList;
 
     private View v;
