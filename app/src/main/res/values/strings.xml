@@ -18,7 +18,7 @@
         <item>1000</item>
     </string-array>
     <string-array name="government_options">
-        <item>none</item>
+        <item>...</item>
         <item>anarchy</item>
         <item>communism</item>
         <item>confederacy</item>
@@ -33,17 +33,19 @@
         <item>theocracy</item>
         <item>workshop</item>
         <item>engineer</item>
+        <item>none</item>
     </string-array>
     <string-array name="allegiance_options">
-        <item>none</item>
+        <item>...</item>
         <item>alliance</item>
         <item>empire</item>
         <item>federation</item>
         <item>independent</item>
         <item>pilots federation</item>
+        <item>none</item>
     </string-array>
     <string-array name="economy_options">
-        <item>none</item>
+        <item>...</item>
         <item>agriculture</item>
         <item>extraction</item>
         <item>high tech</item>
@@ -54,9 +56,10 @@
         <item>terraforming</item>
         <item>tourism</item>
         <item>colony</item>
+        <item>none</item>
     </string-array>
     <string-array name="state_options">
-        <item>none</item>
+        <item>...</item>
         <item>boom</item>
         <item>bust</item>
         <item>famine</item>
@@ -69,5 +72,6 @@
         <item>war</item>
         <item>retreat</item>
         <item>investment</item>
+        <item>none</item>
     </string-array>
 </resources>
