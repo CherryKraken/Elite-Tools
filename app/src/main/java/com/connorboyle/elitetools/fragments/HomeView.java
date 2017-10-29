@@ -29,7 +29,6 @@ public class HomeView extends Fragment implements OnTaskCompleteHelper, View.OnC
     private View v;
     private AutoCompleteTextView etHomeCurSystem;
     private Button btnSaveSystem, btnDiscord, btnGithub;
-    private static final String CURRENT_SYSTEM_RES = "CurSystem";
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.main_layout, container, false);
@@ -37,8 +36,10 @@ public class HomeView extends Fragment implements OnTaskCompleteHelper, View.OnC
         new GetSystemsLiteTask(this).execute();
 
         // Restore current system
-        SharedPreferences settings = getActivity().getSharedPreferences(CURRENT_SYSTEM_RES, 0);
-        etHomeCurSystem.setText(settings.getString(CURRENT_SYSTEM_RES, ""));
+        SharedPreferences settings = getActivity().getSharedPreferences(getActivity()
+                .getString(R.string.curr_system_setting), 0);
+        etHomeCurSystem.setText(settings.getString(getActivity()
+                .getString(R.string.curr_system_setting), ""));
 
         return v;
     }
@@ -66,9 +67,10 @@ public class HomeView extends Fragment implements OnTaskCompleteHelper, View.OnC
     @Override
     public void onStop() {
         super.onStop();
-        SharedPreferences.Editor edt =
-                getActivity().getSharedPreferences(CURRENT_SYSTEM_RES, 0).edit();
-        edt.putString(CURRENT_SYSTEM_RES, etHomeCurSystem.getText().toString());
+        SharedPreferences.Editor edt = getActivity().getSharedPreferences(getActivity()
+                .getString(R.string.curr_system_setting), 0).edit();
+        edt.putString(getActivity().getString(R.string.curr_system_setting),
+                etHomeCurSystem.getText().toString());
         edt.apply();
     }
 
