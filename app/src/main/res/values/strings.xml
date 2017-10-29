@@ -2,6 +2,7 @@
     <string name="app_name">Elite Tools</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="curr_system_setting">CurSystem</string>
     <string name="home_page_text">
         This app is a continuous work-in-progress, meant to challenge and test my abilities as a
         programmer. It is not meant as a full replacement for current tools like Inara and Coriolis.

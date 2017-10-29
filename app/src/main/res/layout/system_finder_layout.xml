@@ -129,6 +129,7 @@
         android:text="Search Systems" />
 
     <ListView
+        android:id="@+id/lvFilteredSystems"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
