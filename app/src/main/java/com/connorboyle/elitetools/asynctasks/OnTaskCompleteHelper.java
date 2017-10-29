@@ -9,6 +9,7 @@ public interface OnTaskCompleteHelper {
         SYSTEMS_LITE,
         SYSTEMS_FULL,
         SYSTEM_INFO,
+        SYSTEM_COORDS,
         RECIPE,
         INGREDIENTS,
         INGREDIENT_INFO,
