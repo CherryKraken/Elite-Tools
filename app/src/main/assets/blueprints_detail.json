@@ -3151,25 +3151,1015 @@
       ]
     }
   },
-  "shielded-distributor": {},
-  "system-focused-distributor": {},
-  "weapon-focused-distributor": {},
-  "lightweight-sensors": {},
-  "long-range-sensors": {},
-  "wide-angle-sensors": {},
-  "shielded-afmu": {},
-  "expanded-capture-arc-interdictor": {},
-  "long-range-interdictor": {},
-  "shielded-scoop": {},
-  "rapid-charge-scb": {},
-  "specialised-scb": {},
-  "enhanced-low-power-shield": {},
-  "kinetic-resistant-shield": {},
-  "reinforced-shield": {},
-  "thermal-resistant-shield": {},
-  "fast-scan-dss": {},
-  "long-range-dss": {},
-  "wide-angle-dss": {},
+  "shielded-distributor": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Power Draw": [30, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Power Draw": [60, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Power Draw": [90, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [80, 200] },
+        { "Power Draw": [120, 80] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Compound Shielding",
+        "Core Dynamics Composites",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Integrity?": [100, 150] },
+        { "Power Draw": [150, 100] }
+      ]
+    }
+  },
+  "system-focused-distributor": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [-5, 0] },
+        { "Engines Recharge": [-2, 0] },
+        { "Systems Capacity": [5, 20] },
+        { "Systems Recharge": [2, 10] },
+        { "Weapons Capacity": [-5, 0] },
+        { "Weapons Recharge": [-2, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [-10, -2] },
+        { "Engines Recharge": [-4, -1] },
+        { "Systems Capacity": [10, 30] },
+        { "Systems Recharge?": [-4, 15] },
+        { "Weapons Capacity": [-10, -2] },
+        { "Weapons Recharge": [-4, -1] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Anomalous Bulk Scan Data",
+        "Chromium",
+        "Electrochemical Arrays"
+      ],
+      "effects": [
+        { "Engines Capacity": [-15, -4] },
+        { "Engines Recharge": [-6, -2] },
+        { "Systems Capacity": [15, 40] },
+        { "Systems Recharge": [6, 20] },
+        { "Weapons Capacity": [-15, -4] },
+        { "Weapons Recharge": [-6, -2] }
+      ]
+    }
+  },
+  "weapon-focused-distributor": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [-5, 0] },
+        { "Engines Recharge": [-2, 0] },
+        { "Systems Capacity": [-5, 0] },
+        { "Systems Recharge": [-2, 0] },
+        { "Weapons Capacity": [5, 20] },
+        { "Weapons Recharge": [2, 10] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Sulphur"
+      ],
+      "effects": [
+        { "Engines Capacity": [-10, -2] },
+        { "Engines Recharge": [-4, -1] },
+        { "Systems Capacity": [-10, -2] },
+        { "Systems Recharge": [-4, -1] },
+        { "Weapons Capacity": [10, 30] },
+        { "Weapons Recharge": [4, 15] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Anomalous Bulk Scan Data",
+        "Hybrid Capacitors",
+        "Selenium"
+      ],
+      "effects": [
+        { "Engines Capacity": [-15, -4] },
+        { "Engines Recharge": [-6, -2] },
+        { "Systems Capacity": [-15, -4] },
+        { "Systems Recharge": [-6, -2] },
+        { "Weapons Capacity": [15, 40] },
+        { "Weapons Recharge": [6, 20] }
+      ]
+    }
+  },
+  "lightweight-sensors": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Integrity": [-15, -10] },
+        { "Mass": [-20, -40] },
+        { "Scan Angle": [-10, -5] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-30, -20] },
+        { "Mass": [-30, -50] },
+        { "Scan Angle": [-15, -10] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Manganese",
+        "Salvaged Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-45, -30] },
+        { "Mass": [-40, -60] },
+        { "Scan Angle": [-20, -15] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Components",
+        "Phase Alloys",
+        "Proto Light Alloys"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            -60,
+            -40
+          ]
+        },
+        {
+          "Mass": [
+            -50,
+            -70
+          ]
+        },
+        { "Scan Angle": [-25, -20] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Proto Light Alloys",
+        "Proto Radiolic Alloys"
+      ],
+      "effects": [
+        {
+          "Integrity": [
+            -75,
+            -50
+          ]
+        },
+        {
+          "Mass": [
+            -60,
+            -80
+          ]
+        },
+        { "Scan Angle": [-30, -25] }
+      ]
+    }
+  },
+  "long-range-sensors": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Mass": [40, 20] },
+        { "Scan Angle": [-20, -10] },
+        { "Range": [10, 14] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron"
+      ],
+      "effects": [
+        { "Mass": [80, 40] },
+        { "Scan Angle": [-30, -15] },
+        { "Range": [20, 30] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron",
+        "Unexpected Emission Data"
+      ],
+      "effects": [
+        { "Mass": [120, 60] },
+        { "Scan Angle": [-40, -20] },
+        { "Range": [30, 45] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Decoded Emission Data",
+        "Electrochemical Arrays",
+        "Germanium"
+      ],
+      "effects": [
+        { "Mass": [160, 80] },
+        { "Scan Angle": [-50, -25] },
+        { "Range": [40, 60] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Abnormal Compact Emissions Data",
+        "Niobium",
+        "Polymer Capacitors"
+      ],
+      "effects": [
+        { "Mass": [200, 100] },
+        { "Scan Angle": [-60, -30] },
+        { "Range": [50, 75] }
+      ]
+    }
+  },
+  "wide-angle-sensors": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Power Draw": [20, 10] },
+        { "Scan Angle": [20, 40] },
+        { "Range": [-8, -5] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Power Draw": [40, 20] },
+        { "Scan Angle": [40, 80] },
+        { "Range": [-16, -8] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Classified Scan Databanks",
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Power Draw": [60, 30] },
+        { "Scan Angle": [60, 120] },
+        { "Range": [-24, -12] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Divergent Scan Data",
+        "Mechanical Equipment",
+        "Niobium"
+      ],
+      "effects": [
+        { "Power Draw": [80, 40] },
+        { "Scan Angle": [80, 160] },
+        { "Range": [-32, -16] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Classified Scan Fragment",
+        "Mechanical Components",
+        "Tin"
+      ],
+      "effects": [
+        { "Power Draw": [100, 50] },
+        { "Scan Angle": [100, 200] },
+        { "Range": [-40, -20] }
+      ]
+    }
+  },
+  "shielded-afmu": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Power Draw": [30, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Power Draw": [60, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Power Draw": [90, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [80, 200] },
+        { "Power Draw": [120, 80] }
+      ]
+    }
+  },
+  "expanded-capture-arc-interdictor": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Facing Limit": [10, 40] },
+        { "Power Draw": [15, 0] },
+        { "Range": [-10, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Mechanical Equipment",
+        "Unusual Encrypted Files"
+      ],
+      "effects": [
+        { "Facing Limit": [20, 60] },
+        { "Power Draw": [30, 10] },
+        { "Range": [-20, -5] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Grid Resistors",
+        "Mechanical Components",
+        "Tagged Encryption Codes"
+      ],
+      "effects": [
+        { "Facing Limit": [30, 80] },
+        { "Power Draw": [45, 20] },
+        { "Range": [-30, -10] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Divergent Scan Data",
+        "Mechanical Equipment",
+        "Strange Wake Solutions"
+      ],
+      "effects": [
+        { "Facing Limit": [40, 100] },
+        { "Power Draw": [60, 30] },
+        { "Range": [-40, -15] }
+      ]
+    }
+  },
+  "long-range-interdictor": {
+    "1": {
+      "ingredients": [
+        "Unusual Encrypted Files"
+      ],
+      "effects": [
+        { "Facing Limit": [-10, 0] },
+        { "Mass": [10, 0] },
+        { "Power Draw": [15, 0] },
+        { "Range": [5, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Atypical Disrupted Wake Echoes",
+        "Tagged Encryption Codes"
+      ],
+      "effects": [
+        { "Facing Limit": [-20, -5] },
+        { "Mass": [20, 5] },
+        { "Power Draw": [30, 10] },
+        { "Range": [10, 30] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Anomalous Bulk Scan Data",
+        "Anomalous FSD Telemetry",
+        "Open Symmetric Keys"
+      ],
+      "effects": [
+        { "Facing Limit": [-30, -10] },
+        { "Mass": [30, 10] },
+        { "Power Draw": [45, 20] },
+        { "Range": [15, 40] }
+      ]
+    }
+  },
+  "shielded-scoop": {
+    "1": {
+      "ingredients": [
+        "Worn Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [20, 50] },
+        { "Power Draw": [30, 20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [40, 100] },
+        { "Power Draw": [60, 40] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Carbon",
+        "High Density Composites",
+        "Shield Emitters"
+      ],
+      "effects": [
+        { "Integrity": [60, 150] },
+        { "Power Draw": [90, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Proprietary Composites",
+        "Shielding Sensors",
+        "Vanadium"
+      ],
+      "effects": [
+        { "Integrity": [80, 200] },
+        { "Power Draw": [120, 80] }
+      ]
+    }
+  },
+  "rapid-charge-scb": {
+    "1": {
+      "ingredients": [
+        "Sulphur"
+      ],
+      "effects": [
+        { "Boot Time": [10, 0] },
+        { "Duration": [-10, 0] },
+        { "Shield Reinforcement": [0, 3] },
+        { "Spin Up Time": [-5, -10] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Chromium",
+        "Grid Resistors"
+      ],
+      "effects": [
+        { "Boot Time": [20, 5] },
+        { "Duration": [-20, -5] },
+        { "Shield Reinforcement": [2, 6] },
+        { "Spin Up Time": [-10, -20] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Precipitated Alloys",
+        "Sulphur"
+      ],
+      "effects": [
+        { "Boot Time": [30, 10] },
+        { "Duration": [-30, -10] },
+        { "Shield Reinforcement": [4, 9] },
+        { "Spin Up Time": [-20, -30] }
+      ]
+    }
+  },
+  "specialised-scb": {
+    "1": {
+      "ingredients": [
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Boot Time": [-4, -8] },
+        { "Integrity": [-10, 0] },
+        { "Power Draw": [10, 0] },
+        { "Thermal Load": [-3, -6] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Specialised Legacy Firmware"
+      ],
+      "effects": [
+        { "Boot Time": [-8, -16] },
+        { "Integrity": [-20, -5] },
+        { "Power Draw": [20, 5] },
+        { "Thermal Load": [-6, -12] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Cracked Industrial Firmware",
+        "Exceptional Scrambled Emission Data"
+      ],
+      "effects": [
+        { "Boot Time": [-12, -26] },
+        { "Integrity": [-30, -10] },
+        { "Power Draw": [30, 10] },
+        { "Thermal Load": [-9, -18] }
+      ]
+    }
+  },
+  "enhanced-low-power-shield": {
+    "1": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings"
+      ],
+      "effects": [
+        { "Integrity": [-10, -5] },
+        { "Mass": [0, -8] },
+        { "Optimised Mass": [-3, 0] },
+        { "Power Draw": [-12, -20] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Germanium"
+      ],
+      "effects": [
+        { "Integrity": [-20, -10] },
+        { "Mass": [-4, -16] },
+        { "Optimised Mass": [-6, -1] },
+        { "Power Draw": [-15, -25] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Germanium",
+        "Precipitated Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-30, -15] },
+        { "Mass": [-8, -24] },
+        { "Optimised Mass": [-9, -2] },
+        { "Optimal Multiplier": [0, 2] },
+        { "Power Draw": [-16, -30] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Inconsistent Shield Soak Analysis",
+        "Niobium",
+        "Thermic Alloys"
+      ],
+      "effects": [
+        { "Integrity": [-40, -20] },
+        { "Mass": [-12, -32] },
+        { "Optimised Mass": [-12, -3] },
+        { "Optimal Multiplier": [0, 4] },
+        { "Power Draw": [-18, -35] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Military Grade Alloys",
+        "Tin",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Integrity": [-50, -25] },
+        { "Mass": [-16, -40] },
+        { "Optimised Mass": [-15, -4] },
+        { "Optimal Multiplier": [0, 6] },
+        { "Power Draw": [-20, -40] }
+      ]
+    }
+  },
+  "kinetic-resistant-shield": {
+    "1": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings"
+      ],
+      "effects": [
+        { "Integrity": [0, 20] },
+        { "Kinetic Resistance": [3, 6] },
+        { "Thermal Resistance": [-6, 0] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Modified Consumer Firmware"
+      ],
+      "effects": [
+        { "Integrity": [5, 25] },
+        { "Kinetic Resistance": [4, 12] },
+        { "Thermal Resistance": [-12, -3] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Modified Consumer Firmware",
+        "Selenium"
+      ],
+      "effects": [
+        { "Integrity?": [10, 20] },
+        { "Kinetic Resistance": [5, 18] },
+        { "Thermal Resistance": [-18, -5] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Focus Crystals",
+        "Inconsistent Shield Soak Analysis",
+        "Mercury"
+      ],
+      "effects": [
+        { "Integrity": [15, 35] },
+        { "Kinetic Resistance": [6, 24] },
+        { "Thermal Resistance": [-24, -8] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Refined Focus Crystals",
+        "Ruthenium",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Integrity": [20, 40] },
+        { "Kinetic Resistance": [7, 30] },
+        { "Thermal Resistance": [-30, -10] }
+      ]
+    }
+  },
+  "reinforced-shield": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Broken Regen Rate": [-20, -15] },
+        { "Explosive Resistance": [0, 1] },
+        { "Kinetic Resistance": [0, 1] },
+        { "Optimal Multiplier": [5, 10] },
+        { "Thermal Resistance": [0, 3] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Conductive Components",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Broken Regen Rate": [-24, -12] },
+        { "Explosive Resistance": [1, 3] },
+        { "Kinetic Resistance": [1, 3] },
+        { "Optimal Multiplier": [7, 15] },
+        { "Regen Rate": [-6, -4] },
+        { "Thermal Resistance": [2, 7] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Conductive Components",
+        "Mechanical Components",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Broken Regen Rate": [-27, -9] },
+        { "Distributor Draw": [5, 0] },
+        { "Explosive Resistance": [2, 4] },
+        { "Kinetic Resistance": [2, 3] },
+        { "Optimal Multiplier": [9, 20] },
+        { "Regen Rate": [-9, -3] },
+        { "Thermal Resistance": [4, 10] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Conductive Ceramics",
+        "Configurable Components",
+        "Manganese"
+      ],
+      "effects": [
+        { "Broken Regen Rate": [-30, -6] },
+        { "Distributor Draw": [10, 5] },
+        { "Explosive Resistance": [3, 6] },
+        { "Kinetic Resistance": [3, 7] },
+        { "Optimal Multiplier": [10, 25] },
+        { "Regen Rate": [-12, -2] },
+        { "Thermal Resistance": [7, 14] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Arsenic",
+        "Conductive Polymers",
+        "Improvised Components"
+      ],
+      "effects": [
+        { "Broken Regen Rate": [-33, -3] },
+        { "Distributor Draw": [15, 10] },
+        { "Explosive Resistance": [4, 7] },
+        { "Kinetic Resistance": [4, 9] },
+        { "Optimal Multiplier": [13, 30] },
+        { "Regen Rate": [-15, -1] },
+        { "Thermal Resistance": [9, 18] }
+      ]
+    }
+  },
+  "thermal-resistant-shield": {
+    "1": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings"
+      ],
+      "effects": [
+        { "Integrity": [0, 20] },
+        { "Kinetic Resistance": [-3, 0] },
+        { "Thermal Resistance": [6, 12] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Germanium"
+      ],
+      "effects": [
+        { "Integrity": [5, 25] },
+        { "Kinetic Resistance": [-6, -2] },
+        { "Thermal Resistance": [8, 24] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Distorted Shield Cycle Recordings",
+        "Germanium",
+        "Selenium"
+      ],
+      "effects": [
+        { "Integrity": [10, 30] },
+        { "Kinetic Resistance": [-9, -3] },
+        { "Thermal Resistance": [10, 36] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Focus Crystals",
+        "Inconsistent Shield Soak Analysis",
+        "Mercury"
+      ],
+      "effects": [
+        { "Integrity": [15, 35] },
+        { "Kinetic Resistance": [-12, -4] },
+        { "Thermal Resistance": [13, 48] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Refined Focus Crystals",
+        "Ruthenium",
+        "Untypical Shield Scans"
+      ],
+      "effects": [
+        { "Integrity": [20, 40] },
+        { "Kinetic Resistance": [-15, -5] },
+        { "Thermal Resistance": [15, 60] }
+      ]
+    }
+  },
+  "fast-scan-dss": {
+    "1": {
+      "ingredients": [
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Mass": [40, 20] },
+        { "Scan Rate": [10, 40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Flawed Focus Crystals",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Mass": [80, 40] },
+        { "Scan Rate": [20, 50] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Flawed Focus Crystals",
+        "Open Symmetric Keys",
+        "Phosphorus"
+      ],
+      "effects": [
+        { "Mass": [120, 60] },
+        { "Scan Rate": [30, 60] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Atypical Encryption Archives",
+        "Focus Crystals",
+        "Manganese"
+      ],
+      "effects": [
+        { "Mass": [160, 80] },
+        { "Scan Rate": [40, 70] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Atypical Encryptors Capture",
+        "Arsenic",
+        "Refined Focus Crystals"
+      ],
+      "effects": [
+        { "Mass": [200, 100] },
+        { "Scan Rate": [50, 80] }
+      ]
+    }
+  },
+  "long-range-dss": {
+    "1": {
+      "ingredients": [
+        "Iron"
+      ],
+      "effects": [
+        { "Mass": [40, 20] },
+        { "Range": [20, 40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron"
+      ],
+      "effects": [
+        { "Mass": [80, 40] },
+        { "Range": [40, 80] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Hybrid Capacitors",
+        "Iron",
+        "Unexpected Emission Data"
+      ],
+      "effects": [
+        { "Mass": [120, 60] },
+        { "Range": [60, 120] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Decoded Emission Data",
+        "Electrochemical Arrays",
+        "Germanium"
+      ],
+      "effects": [
+        { "Mass": [160, 80] },
+        { "Range": [80, 160] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Abnormal Compact Emissions Data",
+        "Niobium",
+        "Polymer Capacitors"
+      ],
+      "effects": [
+        { "Mass": [200, 100] },
+        { "Range": [100, 200] }
+      ]
+    }
+  },
+  "wide-angle-dss": {
+    "1": {
+      "ingredients": [
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [40, 20] },
+        { "Scan Angle": [20, 40] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [80, 40] },
+        { "Scan Angle": [40, 80] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Classified Scan Databanks",
+        "Germanium",
+        "Mechanical Scrap"
+      ],
+      "effects": [
+        { "Mass": [120, 60] },
+        { "Scan Angle": [60, 120] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Divergent Scan Data",
+        "Mechanical Equipment",
+        "Niobium"
+      ],
+      "effects": [
+        { "Mass": [160, 80] },
+        { "Scan Angle": [80, 160] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Classified Scan Fragment",
+        "Mechanical Components",
+        "Tin"
+      ],
+      "effects": [
+        { "Mass": [200, 100] },
+        { "Scan Angle": [100, 200] }
+      ]
+    }
+  },
   "blast-resistant-hrp": {},
   "heavy-duty-hrp": {},
   "kinetic-resistant-hrp": {},
