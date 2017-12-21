@@ -4160,12 +4160,128 @@
       ]
     }
   },
-  "blast-resistant-hrp": {},
+  "blast-resistant-hrp": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Explosive Resistance": [4, 7] },
+        { "Kinetic Resistance": [-3, -2] },
+        { "Thermal Resistance": [-3, -2] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Zinc"
+      ],
+      "effects": [
+        { "Explosive Resistance": [9, 15] },
+        { "Kinetic Resistance": [-6, -4] },
+        { "Thermal Resistance": [-6, -4] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Salvaged Alloys",
+        "Vanadium",
+        "Zirconium"
+      ],
+      "effects": [
+        { "Explosive Resistance": [14, 23] },
+        { "Kinetic Resistance": [-9, -6] },
+        { "Thermal Resistance": [-9, -6] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Galvanising Alloys",
+        "Mercury",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Explosive Resistance": [19, 31] },
+        { "Kinetic Resistance": [-12, -8] },
+        { "Thermal Resistance": [-12, -8] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Molybdenum",
+        "Phase Alloys",
+        "Ruthenium"
+      ],
+      "effects": [
+        { "Explosive Resistance": [23, 39] },
+        { "Kinetic Resistance": [-15, -10] },
+        { "Thermal Resistance": [-15, -10] }
+      ]
+    }
+  },
   "heavy-duty-hrp": {},
   "kinetic-resistant-hrp": {},
   "lightweight-hrp": {},
   "thermal-resistant-hrp": {},
-  "blast-resistant-armour": {},
+  "blast-resistant-armour": {
+    "1": {
+      "ingredients": [
+        "Nickel"
+      ],
+      "effects": [
+        { "Explosive Resistance": [7, 11] },
+        { "Kinetic Resistance": [-5, -3] },
+        { "Thermal Resistance": [-4, -2] }
+      ]
+    },
+    "2": {
+      "ingredients": [
+        "Carbon",
+        "Zinc"
+      ],
+      "effects": [
+        { "Explosive Resistance": [14, 22] },
+        { "Kinetic Resistance": [-10, -5] },
+        { "Thermal Resistance": [-8, -4] }
+      ]
+    },
+    "3": {
+      "ingredients": [
+        "Salvaged Alloys",
+        "Vanadium",
+        "Zirconium"
+      ],
+      "effects": [
+        { "Explosive Resistance": [21, 33] },
+        { "Kinetic Resistance": [-15, -8] },
+        { "Thermal Resistance": [-12, -6] }
+      ]
+    },
+    "4": {
+      "ingredients": [
+        "Galvanising Alloys",
+        "Mercury",
+        "Tungsten"
+      ],
+      "effects": [
+        { "Explosive Resistance": [28, 44] },
+        { "Kinetic Resistance": [-20, -10] },
+        { "Thermal Resistance": [-16, -8] }
+      ]
+    },
+    "5": {
+      "ingredients": [
+        "Molybdenum",
+        "Phase Alloys",
+        "Ruthenium"
+      ],
+      "effects": [
+        { "Explosive Resistance": [35, 56] },
+        { "Kinetic Resistance": [-24, -12] },
+        { "Thermal Resistance": [-20, -10] }
+      ]
+    }
+  },
   "heavy-duty-armour": {},
   "kinetic-resistant-armour": {},
   "lightweight-armour": {},
