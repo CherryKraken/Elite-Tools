@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools.classes;
+package com.connorboyle.elitetools.models;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.connorboyle.elitetools.classes.NoteEntry;
 
 /**
  * Created by Connor Boyle on 2017-06-16.

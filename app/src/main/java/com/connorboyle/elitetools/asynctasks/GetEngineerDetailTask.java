@@ -1,19 +1,14 @@
 package com.connorboyle.elitetools.asynctasks;
 
-import android.os.AsyncTask;
 import android.support.v4.app.Fragment;
 
-import com.connorboyle.elitetools.classes.Engineer;
-import com.connorboyle.elitetools.fragments.EngineersActivity;
+import com.connorboyle.elitetools.models.Engineer;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -16,7 +15,7 @@ import com.connorboyle.elitetools.R;
 import com.connorboyle.elitetools.asynctasks.GetEngineerDetailTask;
 import com.connorboyle.elitetools.asynctasks.GetEngineersTask;
 import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
-import com.connorboyle.elitetools.classes.Engineer;
+import com.connorboyle.elitetools.models.Engineer;
 
 import java.util.ArrayList;
 

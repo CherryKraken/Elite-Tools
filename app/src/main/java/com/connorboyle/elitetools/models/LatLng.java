@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools.classes;
+package com.connorboyle.elitetools.models;
 
 /**
  * Created by Connor Boyle on 03-Jun-17.

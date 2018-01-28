@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.connorboyle.elitetools.classes.NoteEntry;
+import com.connorboyle.elitetools.models.NoteEntry;
 
 /**
  * Created by Connor Boyle on 2017-06-18.

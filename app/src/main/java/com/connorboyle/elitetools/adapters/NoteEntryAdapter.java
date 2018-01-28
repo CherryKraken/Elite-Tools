@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import com.connorboyle.elitetools.fragments.Notebook;
 import com.connorboyle.elitetools.R;
-import com.connorboyle.elitetools.classes.NoteDBHelper;
-import com.connorboyle.elitetools.classes.NoteEntry;
+import com.connorboyle.elitetools.models.NoteDBHelper;
+import com.connorboyle.elitetools.models.NoteEntry;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -18,7 +18,7 @@ import com.connorboyle.elitetools.R;
 import com.connorboyle.elitetools.asynctasks.GetSystemInfoTask;
 import com.connorboyle.elitetools.asynctasks.GetSystemsLiteTask;
 import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
-import com.connorboyle.elitetools.classes.System;
+import com.connorboyle.elitetools.models.System;
 
 import java.util.ArrayList;
 

@@ -1,13 +1,11 @@
 package com.connorboyle.elitetools.asynctasks;
 
-import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 
-import com.connorboyle.elitetools.classes.System;
-import com.connorboyle.elitetools.fragments.MaterialsFinderActivity;
+import com.connorboyle.elitetools.models.System;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -50,54 +48,54 @@ public class GetSystemsExtendedTask extends ParseJsonTask<String, Void, ArrayLis
     @Override
     protected ArrayList<System> doInBackground(String... params) {
         ArrayList<System> systems = new ArrayList<>();
-        HttpURLConnection conn = null;
-        BufferedReader br = null;
-        Gson gson = new Gson();
-
-        String sUrl = URL_BASE + TextUtils.join(AND, params);
-
-        if (lastSystemListed != null) {
-            sUrl += AND + NEXTID + lastSystemListed._id;
-        }
-
-        Log.d("URL string created: ", sUrl);
-
-        try {
-            URL url = new URL(sUrl);
-            conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
-            conn.setRequestProperty("Authorization", BASIC_AUTH);
-            conn.connect();
-
-            InputStream is = conn.getInputStream();
-            br = new BufferedReader(new InputStreamReader(is));
-            systems = gson.fromJson(br, new TypeToken<ArrayList<System>>(){}.getType());
-
-            // Not sure how well this will work with more than two pages
-            if (this.lastSystemListed != null && systems.contains(this.lastSystemListed)) {
-                return null;
-            }
-
-            for (System sys : systems) {
-                if (Math.abs(curSystem.distanceTo(sys)) > mMaxDistance) {
-                    systems.remove(sys);
-                }
-            }
-        } catch (MalformedURLException m) {
-            m.printStackTrace();
-            Log.d("URL string created: ", sUrl);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (conn != null) {
-                conn.disconnect();
-            }
-            try {
-                br.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+//        HttpURLConnection conn = null;
+//        BufferedReader br = null;
+//        Gson gson = new Gson();
+//
+//        String sUrl = URL_BASE + TextUtils.join(AND, params);
+//
+//        if (lastSystemListed != null) {
+//            sUrl += AND + NEXTID + lastSystemListed._id;
+//        }
+//
+//        Log.d("URL string created: ", sUrl);
+//
+//        try {
+//            URL url = new URL(sUrl);
+//            conn = (HttpURLConnection) url.openConnection();
+//            conn.setRequestMethod("GET");
+//            conn.setRequestProperty("Authorization", BASIC_AUTH);
+//            conn.connect();
+//
+//            InputStream is = conn.getInputStream();
+//            br = new BufferedReader(new InputStreamReader(is));
+//            systems = gson.fromJson(br, new TypeToken<ArrayList<System>>(){}.getType());
+//
+//            // Not sure how well this will work with more than two pages
+//            if (this.lastSystemListed != null && systems.contains(this.lastSystemListed)) {
+//                return null;
+//            }
+//
+//            for (System sys : systems) {
+//                if (Math.abs(curSystem.distanceTo(sys)) > mMaxDistance) {
+//                    systems.remove(sys);
+//                }
+//            }
+//        } catch (MalformedURLException m) {
+//            m.printStackTrace();
+//            Log.d("URL string created: ", sUrl);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (conn != null) {
+//                conn.disconnect();
+//            }
+//            try {
+//                br.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
 
         return systems;
     }

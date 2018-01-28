@@ -21,8 +21,7 @@ import com.connorboyle.elitetools.asynctasks.GetModificationsTask;
 import com.connorboyle.elitetools.asynctasks.GetModulesTask;
 import com.connorboyle.elitetools.asynctasks.GetRecipeTask;
 import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
-import com.connorboyle.elitetools.classes.Recipe;
-import com.connorboyle.elitetools.classes.System;
+import com.connorboyle.elitetools.models.Recipe;
 
 import java.util.ArrayList;
 

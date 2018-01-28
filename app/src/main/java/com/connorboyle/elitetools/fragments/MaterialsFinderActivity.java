@@ -9,16 +9,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.connorboyle.elitetools.R;
 import com.connorboyle.elitetools.asynctasks.GetIngredientsTask;
 import com.connorboyle.elitetools.asynctasks.GetSystemsExtendedTask;
 import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
-import com.connorboyle.elitetools.classes.Material;
-import com.connorboyle.elitetools.classes.System;
+import com.connorboyle.elitetools.models.System;
 
 import java.util.ArrayList;
 

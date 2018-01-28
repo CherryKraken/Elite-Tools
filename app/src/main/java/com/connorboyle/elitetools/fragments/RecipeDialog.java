@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.connorboyle.elitetools.adapters.EffectsHashMapAdapter;
 import com.connorboyle.elitetools.R;
-import com.connorboyle.elitetools.classes.Recipe;
+import com.connorboyle.elitetools.models.Recipe;
 
 import java.util.ArrayList;
 

@@ -2,7 +2,7 @@ package com.connorboyle.elitetools.asynctasks;
 
 import android.support.v4.app.Fragment;
 
-import com.connorboyle.elitetools.classes.Recipe;
+import com.connorboyle.elitetools.models.Recipe;
 import com.google.gson.stream.JsonReader;
 
 import java.io.BufferedReader;

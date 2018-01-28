@@ -1,6 +1,6 @@
 package com.connorboyle.elitetools.asynctasks;
 
-import com.connorboyle.elitetools.classes.System;
+import com.connorboyle.elitetools.models.System;
 
 /**
  * Created by Connor Boyle on 22-Oct-17.

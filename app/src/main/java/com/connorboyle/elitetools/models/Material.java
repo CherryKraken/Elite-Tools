@@ -1,4 +1,4 @@
-package com.connorboyle.elitetools.classes;
+package com.connorboyle.elitetools.models;
 
 import java.util.ArrayList;
 

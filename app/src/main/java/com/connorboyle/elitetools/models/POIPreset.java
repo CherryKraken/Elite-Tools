@@ -1,6 +1,4 @@
-package com.connorboyle.elitetools.classes;
-
-import com.connorboyle.elitetools.classes.LatLng;
+package com.connorboyle.elitetools.models;
 
 /**
  * Created by Connor Boyle on 03-Jun-17.

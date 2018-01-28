@@ -15,8 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.connorboyle.elitetools.R;
-import com.connorboyle.elitetools.classes.LatLng;
-import com.connorboyle.elitetools.classes.POIPreset;
+import com.connorboyle.elitetools.models.LatLng;
+import com.connorboyle.elitetools.models.POIPreset;
 
 import java.util.ArrayList;
 
