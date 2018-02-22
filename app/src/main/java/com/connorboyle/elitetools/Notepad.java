@@ -13,7 +13,10 @@ import android.text.TextWatcher;
 import android.text.method.ArrowKeyMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.util.Linkify;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,8 +27,9 @@ import com.connorboyle.elitetools.models.NoteEntry;
  * Created by Connor Boyle on 2017-06-18.
  */
 
-public class Notepad extends AppCompatActivity implements TextWatcher {
+public class Notepad extends AppCompatActivity implements TextWatcher, View.OnClickListener {
 
+    Button btnSaveNoteUp;
     EditText etTitle, etText;
     NoteEntry note;
 
@@ -35,11 +39,13 @@ public class Notepad extends AppCompatActivity implements TextWatcher {
         setContentView(R.layout.notepad_layout);
         Toolbar tb = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(tb);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(false);
 
         etTitle = (EditText) findViewById(R.id.etTitle);
         etText = (EditText) findViewById(R.id.etNotepad);
+        btnSaveNoteUp = (Button) findViewById(R.id.btnSaveNoteUp);
+        btnSaveNoteUp.setOnClickListener(this);
 
         note = new NoteEntry("", "", System.currentTimeMillis());
 
@@ -54,6 +60,11 @@ public class Notepad extends AppCompatActivity implements TextWatcher {
         etText.setMovementMethod(ExtendedLinkMovementMethod.getInstance());
         Linkify.addLinks(etText, Linkify.WEB_URLS);
         etText.addTextChangedListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        onSupportNavigateUp();
     }
 
     private static class ExtendedLinkMovementMethod extends ArrowKeyMovementMethod {

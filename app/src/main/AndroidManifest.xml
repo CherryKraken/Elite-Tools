@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Notepad" android:label="Note Editor" android:screenOrientation="portrait" />
+        <activity android:name=".Notepad" android:label="" android:screenOrientation="portrait" />
     </application>
 
 </manifest>

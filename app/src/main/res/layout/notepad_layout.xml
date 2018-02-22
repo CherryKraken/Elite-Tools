@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="10">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"/>
+        android:background="?attr/colorPrimary">
+
+        <Button
+            android:id="@+id/btnSaveNoteUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="save note"/>
+    </android.support.v7.widget.Toolbar>
 
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="0.5"
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
         android:textStyle="bold"
-        tools:text="My title"
-        android:layout_margin="5dp"/>
+        tools:text="My title" />
 
     <EditText
         android:id="@+id/etNotepad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:layout_weight="9.5"
         android:ems="10"
         android:gravity="start"
@@ -35,6 +46,5 @@
         android:maxLines="50"
         android:selectAllOnFocus="false"
         android:textAlignment="textStart"
-        tools:text="hello"
-        android:layout_margin="5dp"/>
+        tools:text="hello" />
 </LinearLayout>
