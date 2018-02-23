@@ -1,38 +1,31 @@
 package com.connorboyle.elitetools.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Connor Boyle on 30-Sep-17.
  */
 
-public class System {
-    public String _id; // use this ID for EliteBGS requests
+public class System implements Serializable {
     public long id;
-    public String name_lower;
-    public long edsm_id;
+    public long eddbId;
+    public long edsmId;
     public String name;
     public double x, y, z;
+    public boolean needsPermit;
+    public String updatedAt;
+    public String simbadRef;
+    public boolean isPopulated;
     public long population;
-    public boolean is_populated;
-    public int government_id;
-    public String government; // e.g. corporation
-    public int allegiance_id;
-    public String allegiance; // e.g. empire
-    public int state_id;
-    public String state; // e.g. outbreak
-    public int security_id;
-    public String security; // e.g. medium
-    public int primary_economy_id;
-    public String primary_economy; // e.g. extraction
-    public String power; // e.g. li yong-rui
-    public String power_state; // e.g. control
-    public int power_state_id;
-    public boolean needs_permit; // e.g. Sol, Alioth, Vega, etc.
-    public String updated_at; // e.g. 2017-10-18T13:15:26.000Z
-    public String simbad_ref;
-    public int controlling_minor_faction_id;
-    public String controlling_minor_faction; // e.g.
-    public int reserve_type_id;
-    public String reserve_type; // e.g. depleted
+    public String allegiance;
+    public String security;
+    public String reserves;
+    public String primaryEconomy;
+    public String government;
+    public String state;
+    public String powerPlayLeader;
+    public String powerPlayState;
+    public long controllingMinorFactionId;
 
     public System(String name, double x, double y, double z) {
         this.name = name;
@@ -54,11 +47,19 @@ public class System {
         );
     }
 
+    private double distanceToRefSystem;
+    public double getDistanceToRefSystem() { return distanceToRefSystem; }
+
     @Override
     public boolean equals(Object obj) {
         if (obj != null && obj instanceof System) {
-            return this._id == ((System) obj)._id;
+            return this.id == ((System) obj).id;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

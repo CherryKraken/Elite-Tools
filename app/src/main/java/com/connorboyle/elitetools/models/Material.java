@@ -1,7 +1,5 @@
 package com.connorboyle.elitetools.models;
 
-import java.util.ArrayList;
-
 /**
  * Created by Connor Boyle on 01-Oct-17.
  */
@@ -17,20 +15,11 @@ public class Material {
 
     public String name;
     private String grade;
-    private ArrayList<String> methods;
+    public String whereToFind;
 
     public Material(String name, String grade) {
         this.name = name;
         this.grade = grade;
-        methods = new ArrayList<>();
-    }
-
-    public void addMethod(String s) {
-        methods.add(s);
-    }
-
-    public ArrayList<String> getMethods() {
-        return methods;
     }
 
     public String getGrade() {

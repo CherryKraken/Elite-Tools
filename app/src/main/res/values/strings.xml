@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Elite Tools</string>
+    <string name="app_name">Elite Co-Pilot</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="curr_system_setting">CurSystem</string>
@@ -7,9 +7,7 @@
         This app is a continuous work-in-progress, meant to challenge and test my abilities as a
         programmer. It is not meant as a full replacement for current tools like Inara and Coriolis.
         If you find a bug, or the app crashes unexpectedly, send me a message through Discord (@CherryKraken#0483) or the
-        Github project\'s Issue Tracker. I am also open to feature requests, though some may be
-        outside of my ability to implement, or may require me to set up a web-based file server
-        (e.g. serving EDDB\'s 12+ GB \"bodies\" file).\n\n
+        Github project\'s Issue Tracker.\n\n
         CMDR CherryKraken
     </string>
     <string-array name="distance_options">
@@ -20,59 +18,59 @@
     </string-array>
     <string-array name="government_options">
         <item>...</item>
-        <item>anarchy</item>
-        <item>communism</item>
-        <item>confederacy</item>
-        <item>corporate</item>
-        <item>cooperative</item>
-        <item>democracy</item>
-        <item>dictatorship</item>
-        <item>feudal</item>
-        <item>imperial</item>
-        <item>patronage</item>
-        <item>prison colony</item>
-        <item>theocracy</item>
-        <item>workshop</item>
-        <item>engineer</item>
-        <item>none</item>
+        <item>Anarchy</item>
+        <item>Communism</item>
+        <item>Confederacy</item>
+        <item>Corporate</item>
+        <item>Cooperative</item>
+        <item>Democracy</item>
+        <item>Dictatorship</item>
+        <item>Feudal</item>
+        <item>Imperial</item>
+        <item>Patronage</item>
+        <item>Prison Colony</item>
+        <item>Theocracy</item>
+        <item>Workshop</item>
+        <item>Engineer</item>
+        <item>None</item>
     </string-array>
     <string-array name="allegiance_options">
         <item>...</item>
-        <item>alliance</item>
-        <item>empire</item>
-        <item>federation</item>
-        <item>independent</item>
-        <item>pilots federation</item>
-        <item>none</item>
+        <item>Alliance</item>
+        <item>Empire</item>
+        <item>Federation</item>
+        <item>Independent</item>
+        <item>Pilots Federation</item>
+        <item>None</item>
     </string-array>
     <string-array name="economy_options">
         <item>...</item>
-        <item>agriculture</item>
-        <item>extraction</item>
-        <item>high tech</item>
-        <item>industrial</item>
-        <item>military</item>
-        <item>refinery</item>
-        <item>service</item>
-        <item>terraforming</item>
-        <item>tourism</item>
-        <item>colony</item>
-        <item>none</item>
+        <item>Agriculture</item>
+        <item>Extraction</item>
+        <item>High Tech</item>
+        <item>Industrial</item>
+        <item>Military</item>
+        <item>Refinery</item>
+        <item>Service</item>
+        <item>Terraforming</item>
+        <item>Tourism</item>
+        <item>Colony</item>
+        <item>None</item>
     </string-array>
     <string-array name="state_options">
         <item>...</item>
-        <item>boom</item>
-        <item>bust</item>
-        <item>famine</item>
-        <item>civil unrest</item>
-        <item>civil war</item>
-        <item>election</item>
-        <item>expansion</item>
-        <item>lockdown</item>
-        <item>outbreak</item>
-        <item>war</item>
-        <item>retreat</item>
-        <item>investment</item>
-        <item>none</item>
+        <item>Boom</item>
+        <item>Bust</item>
+        <item>Famine</item>
+        <item>Civil Unrest</item>
+        <item>Civil War</item>
+        <item>Election</item>
+        <item>Expansion</item>
+        <item>Lockdown</item>
+        <item>Outbreak</item>
+        <item>War</item>
+        <item>Retreat</item>
+        <item>Investment</item>
+        <item>None</item>
     </string-array>
 </resources>

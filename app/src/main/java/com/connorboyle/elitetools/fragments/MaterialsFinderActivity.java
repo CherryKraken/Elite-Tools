@@ -37,8 +37,8 @@ public class MaterialsFinderActivity extends Fragment implements OnTaskCompleteH
         systems = new ArrayList<>();
         setupControls();
         new GetIngredientsTask(this).execute();
-        new GetSystemsExtendedTask(this, new System("Sol", 0,0,0), null, 500).execute(
-                "statename=outbreak", "allegiancename=independent");
+        new GetSystemsExtendedTask(this, "Sol").execute(
+                "state=outbreak", "allegiance=independent");
         return v;
     }
 

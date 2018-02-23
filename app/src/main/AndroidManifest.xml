@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Notepad" android:label="" android:screenOrientation="portrait" />
+        <activity android:name=".SystemInfoActivity" />
     </application>
 
 </manifest>
