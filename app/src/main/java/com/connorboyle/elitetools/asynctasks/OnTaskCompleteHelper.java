@@ -18,7 +18,10 @@ public interface OnTaskCompleteHelper {
         MODULES,
         ENGINEERS,
         ENGINEERS_FOR_GRADE,
-        ENGINEER_INFO
+        ENGINEER_INFO,
+        MATERIAL_BODIES,
+        MATERIAL_SYSTEMS,
+        MATERIAL_ELWS,
     }
 
     /**
