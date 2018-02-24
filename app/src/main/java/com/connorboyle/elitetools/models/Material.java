@@ -14,8 +14,10 @@ public class Material {
     };
 
     public String name;
-    private String grade;
-    public String whereToFind;
+    public String grade;
+    public String type;
+    public String method;
+    public String methodDesc;
 
     public Material(String name, String grade) {
         this.name = name;

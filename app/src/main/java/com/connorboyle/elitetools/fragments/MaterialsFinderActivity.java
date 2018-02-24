@@ -1,5 +1,6 @@
 package com.connorboyle.elitetools.fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,12 +10,22 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.connorboyle.elitetools.R;
+import com.connorboyle.elitetools.adapters.MaterialBodiesAdapter;
+import com.connorboyle.elitetools.adapters.MaterialSystemsAdapter;
 import com.connorboyle.elitetools.asynctasks.GetIngredientsTask;
+import com.connorboyle.elitetools.asynctasks.GetMaterialSystemsTask;
+import com.connorboyle.elitetools.asynctasks.GetRawMaterialBodiesTask;
 import com.connorboyle.elitetools.asynctasks.GetSystemsExtendedTask;
 import com.connorboyle.elitetools.asynctasks.OnTaskCompleteHelper;
+import com.connorboyle.elitetools.models.Material;
+import com.connorboyle.elitetools.models.MaterialBodyVM;
+import com.connorboyle.elitetools.models.MaterialSystemVM;
 import com.connorboyle.elitetools.models.System;
 
 import java.util.ArrayList;
@@ -23,79 +34,82 @@ import java.util.ArrayList;
  * Created by Connor Boyle on 20-Sep-17.
  */
 
-public class MaterialsFinderActivity extends Fragment implements OnTaskCompleteHelper {
+public class MaterialsFinderActivity extends Fragment implements OnTaskCompleteHelper, View.OnClickListener {
     private View v;
 
     private TextView tvRarity;
-    private AutoCompleteTextView etMatToFind, etCurSystem;
+    private TextView tvHowToFind;
+    private TextView tvWhereToFind;
+    private Button btnFindMat;
+    private AutoCompleteTextView etMatToFind;
 
-    private ArrayList<String> materials;
-    private ArrayList<System> systems;
+    private ArrayList<Material> materials;
+    private ArrayList<String> materialNames;
+
+    private ListView lvResults;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.mat_finder_layout, container, false);
-        systems = new ArrayList<>();
         setupControls();
         new GetIngredientsTask(this).execute();
-        new GetSystemsExtendedTask(this, "Sol").execute(
-                "state=outbreak", "allegiance=independent");
         return v;
     }
 
     private void setupControls() {
         tvRarity = (TextView) v.findViewById(R.id.tvRarity);
+        tvHowToFind = (TextView) v.findViewById(R.id.tvHowToFind);
+        tvWhereToFind = (TextView) v.findViewById(R.id.tvWhereToFind);
         etMatToFind = (AutoCompleteTextView) v.findViewById(R.id.etMatToFind);
-        etCurSystem = (AutoCompleteTextView) v.findViewById(R.id.etCurSystem);
+        lvResults = (ListView) v.findViewById(R.id.lvResults);
 
-        tvRarity.setVisibility(View.INVISIBLE);
-        etCurSystem.setVisibility(View.GONE);
+        etMatToFind.setThreshold(1);
 
-        etMatToFind.setThreshold(2);
-        etCurSystem.setThreshold(2);
-
-        etMatToFind.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                onMaterialSelected(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                if (materials.contains(etMatToFind.getText().toString())) {
-                    onMaterialSelected(materials.indexOf(etMatToFind.getText().toString()));
-                }
-            }
-        });
+        btnFindMat = (Button) v.findViewById(R.id.btnFindMat);
+        btnFindMat.setOnClickListener(this);
     }
-
-    private void onMaterialSelected(int position) {
-        //new GetIngredientInfoTask(this).execute(materials.get(position));
-    }
-
-    //    public void onSystemListTaskCompleted(ArrayList<System> list) {
-//        if (list != null && list.size() > 1) {
-//            this.systems.addAll(list);
-//            new GetSystemsExtendedTask(this, new System("Sol", 0,0,0), systems.get(systems.size()-1), 500).execute(
-//                    "statename=outbreak", "allegiancename=independent");
-//        } else {
-//            ArrayList<String> strings = new ArrayList<>();
-//            for (System s : systems) {
-//                strings.add(String.format("%s (%f)", s.name, s.distanceTo(new System("Sol", 0,0,0))));
-//            }
-//            ((ListView) v.findViewById(R.id.lvRelSystems)).setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, android.R.id.text1, strings));
-//            Toast.makeText(getContext(), strings.size() + "", Toast.LENGTH_SHORT).show();
-//        }
-//    }
 
     @Override
     public void onAsyncTaskComplete(Task task, Object obj) {
         switch (task) {
             case INGREDIENTS:
-                materials = (ArrayList<String>) obj;
-                etMatToFind.setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, android.R.id.text1, materials));
+                materials = (ArrayList<Material>) obj;
+                materialNames = new ArrayList<>();
+
+                for (Material m : materials) {
+                    materialNames.add(m.name);
+                }
+                etMatToFind.setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, android.R.id.text1, materialNames));
                 break;
-            case INGREDIENT_INFO:
+            case MATERIAL_BODIES:
+                ArrayList<MaterialBodyVM> list = (ArrayList<MaterialBodyVM>) obj;
+                lvResults.setAdapter(new MaterialBodiesAdapter(getContext(), list));
                 break;
+            case MATERIAL_SYSTEMS:
+                ArrayList<MaterialSystemVM> list2 = (ArrayList<MaterialSystemVM>) obj;
+                lvResults.setAdapter(new MaterialSystemsAdapter(getContext(), list2));
+                break;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (materialNames.contains(etMatToFind.getText().toString())) {
+            Material selection = materials.get(materialNames.indexOf(etMatToFind.getText().toString()));
+            SharedPreferences settings = getActivity().getSharedPreferences(getActivity()
+                    .getString(R.string.curr_system_setting), 0);
+
+            tvRarity.setText("Grade: " + selection.getGrade());
+            tvHowToFind.setText("How to obtain: " + selection.methodDesc);
+
+            if (selection.type.equals("Raw")) {
+                tvWhereToFind.setText("May be found on the following planets:");
+                new GetRawMaterialBodiesTask(this, selection.name, settings.getString("CurSystem", "sol")).execute();
+            } else if (selection.method.length() > 0) {
+                tvWhereToFind.setText("May be found in the following systems:");
+                new GetMaterialSystemsTask(this, selection.name, settings.getString("CurSystem", "sol")).execute();
+            } else {
+                tvWhereToFind.setText("May be found in most systems.");
+            }
         }
     }
 }
